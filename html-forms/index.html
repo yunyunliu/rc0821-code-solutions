@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>Coding Form!</h1>
+    <form>
+      <!-- email input -->
+      <div>
+        <label>
+        Email
+        <br>
+        <input type="email">
+        </label>
+      </div>
+      <!-- select dropdown -->
+      <div>
+        <label>
+          Why is coding cool?
+          <br>
+          <select id="why-coding">
+            <option value="">Select an option</option>
+            <option value="interesting">Because it's interesting.</option>
+            <option value="fun">Because it's fun.</option>
+            <option value="powerful">Because its powerful.</option>
+          </select>
+        </label>
+      </div>
+      <!-- radio button group -->
+      <div>
+          Favorite Language (choose one)
+          <br>
+          <input type="radio" id="html" name="favorite-language" value="HTML">
+          <label for="html">HTML</label>
+          <input type="radio" id="css" name="favorite-language" value="CSS">
+          <label for="css">CSS</label>
+          <input type="radio" id="js" name="favorite-language" value="Javascript">
+          <label for="js">Javascript</label>
+      </div>
+      <!-- checkbox -->
+      <div>
+        <label>
+          Would you like to sign up for more information?
+          <br>
+          <input type="checkbox" name="signup" value="yes">
+          Sign me up!
+        </label>
+      </div>
+      <!-- textarea -->
+      <div>
+        <label>
+          Comments
+          <br>
+          <textarea name="comments" rows="7"></textarea>
+        </label>
+      </div>
+      <!-- submit -->
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </body>
+</html>
