@@ -10,24 +10,21 @@
     <form>
       <!-- email input -->
       <div>
-        <label>
-        Email
+        <label>Email
         <br>
-        <input type="email">
+        <input type="email" name="email">
         </label>
       </div>
       <!-- select dropdown -->
       <div>
-        <label>
-          Why is coding cool?
-          <br>
-          <select id="why-coding">
-            <option value="">Select an option</option>
-            <option value="interesting">Because it's interesting.</option>
-            <option value="fun">Because it's fun.</option>
-            <option value="powerful">Because its powerful.</option>
-          </select>
-        </label>
+        <label for="why-coding">Why is coding cool?</label>
+        <br>
+        <select name="why" id="why-coding">
+          <option value="">Select an option</option>
+          <option value="interesting">Because it's interesting.</option>
+          <option value="fun">Because it's fun.</option>
+          <option value="powerful">Because its powerful.</option>
+        </select>
       </div>
       <!-- radio button group -->
       <div>
@@ -42,12 +39,10 @@
       </div>
       <!-- checkbox -->
       <div>
-        <label>
           Would you like to sign up for more information?
           <br>
-          <input type="checkbox" name="signup" value="yes">
-          Sign me up!
-        </label>
+          <input type="checkbox" name="more-info" id="signup">
+          <label for="signup">Sign me up!</label>
       </div>
       <!-- textarea -->
       <div>
