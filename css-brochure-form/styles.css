@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  box-sizing: border-box;
+}
+
+/* input {
+  border-radius: 5px;
+  border-color: #d1cfc9;
+} */
+
+button {
+  border: none;
+  border-radius: 5em;
+  background-color: #f74914;
+  color: white;
+  padding: 6px 12px;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.gray-border {
+  border-color: #d1cfc9;
+}
+
+.orange-text {
+  color: #f74914;
+}
