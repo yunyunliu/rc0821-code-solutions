@@ -1,0 +1,22 @@
+button {
+  background-color: azure;
+  font-family: sans-serif;
+  font-size: 5em;
+  border-radius: 10px;
+  border: solid gray;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: grab;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
