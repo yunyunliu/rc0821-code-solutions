@@ -5,6 +5,8 @@ body {
 
 form {
   padding: 5em;
+  margin: auto;
+  width: 50%;
 }
 
 fieldset {
@@ -14,6 +16,14 @@ fieldset {
 legend {
   font-family: 'AtlasGrotesk', sans-serif;
   font-weight: 900;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'AtlasGrotesk', sans-serif;
+  font-weight: 900;
+  color: #f74914;
+  text-transform: uppercase;
 }
 
 input {
@@ -43,7 +53,8 @@ select {
 label {
   font-family: 'Brandon Grotesque', sans-serif;
   padding-left: 6px;
-  font-size: 0.8em;
+  font-size: 12px;
+  font-weight: 500;
   margin-bottom: 5px;
 
   /* font-family: 'AtlasGrotesk', sans-serif; */
