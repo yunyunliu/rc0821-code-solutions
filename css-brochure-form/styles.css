@@ -1,17 +1,54 @@
-form {
+body {
   display: flex;
   justify-content: center;
 }
 
-fieldset {
-  border: none;
-  box-sizing: border-box;
+form {
+  padding: 5em;
 }
 
-/* input {
+fieldset {
+  border: none;
+}
+
+legend {
+  font-family: 'AtlasGrotesk', sans-serif;
+  font-weight: 900;
+}
+
+input {
+  border-color: solid #dbd9d3;
+  border-width: 1px;
   border-radius: 5px;
-  border-color: #d1cfc9;
-} */
+
+  /* padding-left: 6px; */
+  text-indent: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  color: #878580;
+  width: 100%;
+}
+
+select {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  color: #878580;
+  border-color: solid #dbd9d3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-family: 'Brandon Grotesque', sans-serif;
+  padding-left: 6px;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+
+  /* font-family: 'AtlasGrotesk', sans-serif; */
+  color: #878580;
+}
 
 button {
   border: none;
@@ -23,14 +60,6 @@ button {
 
 .upper-case {
   text-transform: uppercase;
-}
-
-.border-radius {
-  border-radius: 5px;
-}
-
-.gray-border {
-  border-color: #d1cfc9;
 }
 
 .orange-text {
