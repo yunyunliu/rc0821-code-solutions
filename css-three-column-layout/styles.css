@@ -1,0 +1,40 @@
+
+body {
+  background-color: #129ae3;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-weight: 200;
+}
+
+.row {
+  display: flex;
+}
+
+.round {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-height: 70px;
+  max-width: auto;
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-third {
+  flex-basis: calc(100% / 3);
+}
