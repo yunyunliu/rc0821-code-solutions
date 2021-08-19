@@ -26,3 +26,7 @@
 .large {
   max-width: 200px;
 }
+
+img {
+  flex-basis: 100%;
+}
