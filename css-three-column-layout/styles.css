@@ -11,6 +11,7 @@ body {
   font-family: Lato, sans-serif;
   color: white;
   font-weight: 200;
+  text-align: center;
 }
 
 .row {
@@ -39,4 +40,11 @@ body {
 
 .col-third {
   flex-basis: calc(100% / 3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h3 {
+  width: 100%;
 }
