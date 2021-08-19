@@ -1,7 +1,3 @@
-body {
-  display: flex;
-  justify-content: center;
-}
 
 form {
   padding: 5em;
@@ -17,55 +13,44 @@ legend {
   font-family: 'AtlasGrotesk', sans-serif;
   font-weight: 900;
   text-align: center;
-}
-
-h4 {
-  font-family: 'AtlasGrotesk', sans-serif;
-  font-weight: 900;
-  color: #f74914;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 input {
-  border-color: solid #dbd9d3;
-  border-width: 1px;
-  border-radius: 5px;
-
-  /* padding-left: 6px; */
-  text-indent: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
   color: #878580;
   width: 100%;
+  text-indent: 8px;
+  border: 1px solid #dbd9d3;
+  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 select {
-  padding-top: 8px;
-  padding-bottom: 8px;
   width: 100%;
   color: #878580;
-  border-color: solid #dbd9d3;
+  padding: 8px 0;
+  border: 1px solid #dbd9d3;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
 label {
+  color: #878580;
   font-family: 'Brandon Grotesque', sans-serif;
-  padding-left: 6px;
   font-size: 12px;
   font-weight: 500;
+  padding-left: 6px;
   margin-bottom: 5px;
-
-  /* font-family: 'AtlasGrotesk', sans-serif; */
-  color: #878580;
 }
 
 button {
-  border: none;
-  border-radius: 5em;
   background-color: #f74914;
   color: white;
+  border: none;
+  border-radius: 5em;
   padding: 6px 12px;
 }
 
@@ -75,4 +60,9 @@ button {
 
 .orange-text {
   color: #f74914;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
 }
