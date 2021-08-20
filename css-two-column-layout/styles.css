@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-full {
+  justify-content: center;
+  flex-basis: 100%;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.container {
+  font-family: 'Karla', sans-serif;
+}
+
+button {
+  color: #bf133b;
+  border: 1px solid #bf133b;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+header {
+  text-transform: uppercase;
+  text-align: center;
+}
