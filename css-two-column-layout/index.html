@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Challenge - Two Column Layout</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- row1 -->
+    <div class="row">
+      <div class="col-full">
+        <header>
+          <h1 class="page-title">scale, speed, agility</h1>
+          <p>
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+  "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+          </p>
+        </header>
+      </div>
+    </div>
+    <!-- row2 -->
+    <div class="row">
+      <!-- left half -->
+      <div class="col-half">
+        <!-- software -->
+        <div class="row">
+          <div class="col-quarter">
+            <img src="./images/software.svg" alt="software">
+          </div>
+          <div class="col-three-quarters">
+            <article>
+              <h3>intuitive, smart software</h3>
+              <p>
+                We build products that transform how healthcare facilities run aross Africa &#8212; making them readically more efficient
+                operationally and financially, a complete turnaround.
+              </p>
+            </article>
+          </div>
+        </div>
+        <!-- circumstances -->
+        <div class="row">
+          <div class="col-quarter"><img src="./images/circumstance.svg" alt="circumstance"></div>
+          <div class="row-three-quarters">
+            <article>
+              <h3>for any circumstance</h3>
+              <p>
+                 Our intuitive system is built around the peculiarities of your facility; we support
+                 offline deployments, sync to the cloud and run on any devive 24&sol;7.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <!-- right half -->
+       <div class="col-half">
+         <!-- practice -->
+         <div class="row">
+           <div class="col-quarter"><img src="./images/practice.svg" alt="practice"></div>
+           <div class="col-three-quarters">
+            <article>
+              <h3>practice medicine, not administration</h3>
+              <p>
+                Our all&#8210;in&#8210;one electronic health records &#40;EHR&#41;, hospital
+                management &#40;HMIS&#41; &amp; billing system helps strealine you facility, reduce waste
+                and improve quality of care.
+              </p>
+            </article>
+           </div>
+         </div>
+         <!-- data -->
+         <div class="row">
+           <div class="col-quarter"><img src="./images/data.svg" alt="data"></div>
+           <div class="col-three-quarters">
+            <article>
+              <h3>data that transforms</h3>
+              <p>
+                We understand your facility better than you do; we provide visually&#8210;appealing
+                real&#8210;time analytics, reports and trends at your finger tips.
+              </p>
+            </article>
+           </div>
+          </div>
+      </div>
+    </div>
+    <!-- row3 -->
+    <div class="row">
+      <div class="col-full">
+        <!-- button -->
+        <button class="btn">learn more</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

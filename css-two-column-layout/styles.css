@@ -1,0 +1,66 @@
+/* grid classes */
+.row {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.col-full {
+  justify-content: center;
+  flex-basis: 100%;
+  display: flex;
+}
+
+.col-half {
+  flex-basis: 50%;
+}
+
+.col-quarter {
+  flex-basis: 25%;
+}
+
+.col-three-quarters {
+  flex-basis: 75%;
+}
+
+.container {
+  font-family: 'Karla', sans-serif;
+  padding: 50px;
+}
+
+/* other rulesets */
+
+/* title font size and letter spacing */
+.page-title {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.btn {
+  color: #bf133b;
+  border: 1px solid #bf133b;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+/* capitalize article titles and button text */
+h3,
+.btn {
+  text-transform: uppercase;
+}
+
+/* line spacing of text */
+p {
+  line-height: 180%;
+}
+
+/* center page title and sub-title */
+header {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 120px;
+  margin-bottom: 20px;
+}
