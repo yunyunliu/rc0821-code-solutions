@@ -1,6 +1,7 @@
 .row {
   display: flex;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .col-full {
@@ -12,8 +13,17 @@
   flex-basis: 50%;
 }
 
+.col-quarter {
+  flex-basis: 25%;
+}
+
+.col-three-quarters {
+  flex-basis: 75%;
+}
+
 .container {
   font-family: 'Karla', sans-serif;
+  padding: 20px;
 }
 
 button {
@@ -21,6 +31,14 @@ button {
   border: 1px solid #bf133b;
   background-color: white;
   padding: 10px 30px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 180%;
 }
 
 header {
