@@ -25,8 +25,9 @@
 }
 
 nav {
-  position: relative;
+  /* position: relative; */
   display: flex;
+  justify-content: space-between;
 
   /* color: #cbcbcb; */
 
@@ -34,17 +35,20 @@ nav {
 }
 
 .inline-list {
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
 
   /* padding-top: 0;
   margin-top: 0; */
 }
 
-.brand {
-  font-family: 'Tiempos Headline', serif;
-  color: #537c94;
+.logo {
+  width: 100px;
+
+  /* position: absolute;
+  left: 0;
+  top: 20px; */
 }
 
 a {
