@@ -1,20 +1,21 @@
 /* grid layout classes */
 .container {
-  width: 90%;
-  margin: auto;
+  /* width: 90%;
+  margin: auto; */
   font-family: 'Avenir', sans-serif;
 }
 
-/*
-.row {
-
+/* horizontal rule below nav */
+.top-row {
+  border-bottom: 1px solid #c7c8c8;
 }
 
 .col-full {
-
+  width: 90%;
+  margin: auto;
 }
 
-.col-half {
+/* .col-half {
 
 } */
 
@@ -26,7 +27,10 @@
 nav {
   position: relative;
   display: flex;
-  align-items: flex-start;
+
+  /* color: #cbcbcb; */
+
+  /* align-items: flex-start; */
 }
 
 .inline-list {
