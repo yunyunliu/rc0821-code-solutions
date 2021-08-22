@@ -1,16 +1,25 @@
 /* grid layout classes */
 .container {
-  /* width: 90%;
-  margin: auto; */
   font-family: 'Avenir', sans-serif;
 }
 
-/* horizontal rule below nav */
-.row {
-  border-bottom: 1px solid #c7c8c8;
+.flex-container {
+  display: flex;
 }
 
-.col-full {
+.direction-col {
+  flex-direction: column;
+}
+
+.wrap-content {
+  flex-wrap: wrap;
+}
+
+.row {
+  width: 100%;
+}
+
+.col-nine-tenths {
   width: 90%;
   margin: auto;
   display: flex;
@@ -18,9 +27,39 @@
   align-items: center;
 }
 
-/* .col-half {
+/* actually 40% of container */
+.col-half {
+  flex-basis: 40%;
+}
 
-} */
+/* horizontal rule */
+.hr {
+  border-bottom: 1px solid #c7c8c8;
+}
+
+/* text */
+.font-tiempos {
+  font-family: 'Tiempos Headline', serif;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.center-content {
+  justify-content: center;
+}
+
+/* colors */
+
+.bg-light {
+  background-color: #fafafa;
+}
+
+.bg-dark {
+  background-color: #525351;
+}
+
 
 /* nav styling */
 .nav-list-item {
@@ -49,10 +88,6 @@ nav {
 
 .logo {
   width: 100px;
-
-  /* position: absolute;
-  left: 0;
-  top: 20px; */
 }
 
 a {
@@ -89,36 +124,43 @@ li {
 .image-container {
   padding: 60px 0;
   display: flex;
-  justify-content: center;
   position: relative;
 }
 
 .overlay {
   position: absolute;
   left: 70px;
-  top: 125px;
+  top: 150px;
   width: 40%;
   color: #fbfbfb;
   line-height: 1.5em;
   letter-spacing: 125%;
+  font-size: 20px;
 }
 
 .overlay-txt {
-  font-size: 0.8em;
+  font-size: 14px;
+  padding-bottom: 50px;
 }
 
 .overlay-heading {
-  font-family: 'Tiempos Headline', serif;
   width: 75%;
   line-height: 2em;
-
-  /* font-size: 200%; */
-
-  /* font-weight: 300; */
 }
 
 .btn-get-started {
   margin-top: 10px;
   width: 130px;
   height: 40px;
+}
+
+.clinicians-prefer {
+  padding-top: 50px;
+  color: #525351;
+}
+
+.clinicians-text {
+  padding: 20px 240px 50px;
+  line-height: 2em;
+  font-size: 14px;
 }
