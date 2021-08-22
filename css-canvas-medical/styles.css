@@ -131,7 +131,9 @@ li {
   position: absolute;
   left: 100px;
   top: 175px;
+  right: 50%;
   width: 40%;
+  bottom: 200px;
   color: #fbfbfb;
   line-height: 1.5em;
   letter-spacing: 125%;
