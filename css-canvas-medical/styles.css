@@ -19,8 +19,8 @@
   width: 100%;
 }
 
-.col-nine-tenths {
-  width: 90%;
+.col {
+  width: 88%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -86,17 +86,8 @@ nav {
   width: 100%;
 }
 
-.inline-list {
-  /* position: absolute;
-  right: 0;
-  top: 0; */
-
-  /* padding-top: 0;
-  margin-top: 0; */
-}
-
 .logo {
-  width: 100px;
+  width: 120px;
 }
 
 a {
@@ -112,14 +103,13 @@ a {
   border-radius: 3px;
 }
 
-.btn-contact {
-  height: 31px;
-
-  /* width: auto; */
+li {
+  padding-left: 30px;
 }
 
-li {
-  margin-left: 30px;
+.btn-contact {
+  height: 40px;
+  width: 100px;
 }
 
 /* hero image */
@@ -131,15 +121,15 @@ li {
 }
 
 .image-container {
-  padding: 60px 0;
+  padding: 80px 0;
   display: flex;
   position: relative;
 }
 
 .overlay {
   position: absolute;
-  left: 70px;
-  top: 150px;
+  left: 100px;
+  top: 175px;
   width: 40%;
   color: #fbfbfb;
   line-height: 1.5em;
@@ -149,6 +139,7 @@ li {
 
 .overlay-txt {
   padding-bottom: 50px;
+  line-height: 1.75em;
 }
 
 .overlay-heading {
@@ -158,8 +149,8 @@ li {
 
 .btn-get-started {
   margin-top: 10px;
-  width: 130px;
-  height: 40px;
+  width: 160px;
+  height: 50px;
   font-size: 16px;
 }
 
@@ -169,7 +160,7 @@ li {
 }
 
 .clinicians-text {
-  padding: 20px 240px 50px;
+  padding: 20px 400px 50px;
   line-height: 2em;
 }
 
@@ -182,7 +173,7 @@ li {
 }
 
 .get-started-bottom {
-  width: 160px;
+  width: 180px;
   height: 50px;
   font-size: 16px;
   margin-top: 12px;
@@ -198,7 +189,7 @@ li {
 }
 
 .learn-more-section {
-  padding: 50px;
+  padding: 30px 0;
 }
 
 .logo-white {
@@ -206,7 +197,8 @@ li {
 }
 
 .bottom-nav {
-  padding: 50px 0;
+  padding-top: 100px;
+  padding-bottom: 70px;
   color: #fbfbfb;
 }
 
