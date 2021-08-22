@@ -50,6 +50,14 @@
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
 /* colors */
 
 .bg-light {
@@ -60,7 +68,6 @@
   background-color: #525351;
 }
 
-
 /* nav styling */
 .nav-list-item {
   display: inline-block;
@@ -68,13 +75,7 @@
 
 nav {
   /* position: relative; */
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-
-  /* color: #cbcbcb; */
-
-  /* align-items: flex-start; */
 }
 
 .inline-list {
@@ -139,7 +140,6 @@ li {
 }
 
 .overlay-txt {
-  font-size: 14px;
   padding-bottom: 50px;
 }
 
@@ -152,6 +152,7 @@ li {
   margin-top: 10px;
   width: 130px;
   height: 40px;
+  font-size: 16px;
 }
 
 .clinicians-prefer {
@@ -162,5 +163,31 @@ li {
 .clinicians-text {
   padding: 20px 240px 50px;
   line-height: 2em;
-  font-size: 14px;
+}
+
+.location {
+  padding-bottom: 10px;
+}
+
+.row3 {
+  padding-bottom: 80px;
+}
+
+.get-started-bottom {
+  width: 160px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.learn-more {
+  color: #525351;
+}
+
+.learn-more-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.learn-more-section {
+  padding: 50px;
 }
