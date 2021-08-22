@@ -23,10 +23,6 @@
   flex-basis: 25%;
 }
 
-.large {
-  /* max-width: 200px; */
-}
-
 img {
-  flex-basis: 100%;
+  max-width: 100%;
 }
