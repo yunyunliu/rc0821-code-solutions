@@ -21,14 +21,12 @@
 
 .col {
   width: 88%;
+  min-width: 950px;
   margin: auto;
   display: flex;
   justify-content: center;
-
-  /* align-items: center; */
 }
 
-/* actually 40% of container */
 .col-half {
   flex-basis: 50%;
 }
@@ -37,8 +35,6 @@
   flex-basis: 25%;
   align-items: flex-start;
 }
-
-/* col */
 
 /* horizontal rule */
 .hr {
@@ -77,12 +73,12 @@
 }
 
 /* nav styling */
+
 .nav-list-item {
   display: inline-block;
 }
 
 nav {
-  /* position: relative; */
   width: 100%;
 }
 
@@ -95,8 +91,8 @@ a {
   color: #cbcbcb;
 }
 
-
 /* button styling */
+
 .btn {
   color: #f4f5f7;
   background-color: #294464;
@@ -117,7 +113,6 @@ li {
 
 .hero {
   width: 100%;
-  height: auto;
   filter: brightness(70%);
 }
 
@@ -129,11 +124,9 @@ li {
 
 .overlay {
   position: absolute;
-  left: 100px;
-  top: 150px;
+  left: 5%;
+  top: 15%;
   right: 50%;
-  width: 40%;
-  bottom: 200px;
   color: #fbfbfb;
   line-height: 1.5em;
   letter-spacing: 125%;
