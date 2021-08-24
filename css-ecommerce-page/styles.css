@@ -1,5 +1,5 @@
 .row {
-  width: 88%;
+  width: 80%;
   margin: auto;
   font-family: sans-serif;
 }
@@ -29,4 +29,16 @@ img {
   height: auto;
   width: 100%;
   padding: 0 8px;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.price {
+  background-color: #fff2e7;
+}
+
+.gray-out-text {
+  color: #ddd;
 }
