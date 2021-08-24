@@ -1,0 +1,32 @@
+.row {
+  width: 88%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.col {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.col-fifth {
+  flex-basis: 20%;
+}
+
+.page-heading {
+  font-size: 24px;
+  text-align: center;
+  color: #525351;
+}
+
+/* .img-container {
+  width: 100%;
+} */
+
+img {
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  padding: 0 8px;
+}
