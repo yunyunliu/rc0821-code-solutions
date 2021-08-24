@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Challenge - Four Column Layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- row 1 -->
+    <div class="row">
+      <!-- full column -->
+      <div class="col-full">
+        <header>
+          <h1 >How it Works</h1>
+        </header>
+      </div>
+    </div>
+
+    <!-- row 2 (screen images)-->
+    <div class="row">
+      <!-- column -->
+      <div class="col-full">
+
+          <!-- switch screen img -->
+        <div class="img-container">
+          <img src="./images/screen-1.png" alt="app-switching" class="screen-img">
+        </div>
+        <!-- filter screen img -->
+        <div class="img-container">
+          <img src="./images/screen-2.png" alt="trip-filtering" class="screen-img">
+        </div>
+        <!-- service filter screen img -->
+        <div class="img-container">
+          <img src="./images/screen-3.png" alt="service-filters" class="screen-img">
+        </div>
+        <!-- stats screen img -->
+        <div class="img-container">
+          <img src="./images/screen-4.png" alt="stats-mileage" class="screen-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3 (icons)-->
+    <div class="row">
+      <div class="col-full">
+          <!-- switch icon -->
+        <div class="col-quarter">
+          <img src="./images/switch-icon.png" alt="switch-icon" class="icon">
+          <h3 class="description-heading">App Switching</h3>
+          <p class="description-txt">Toggles all your apps on and off.</p>
+        </div>
+        <!-- filter icon -->
+        <div class="col-quarter">
+          <img src="./images/filter-icon.png" alt="filter-icon" class="icon">
+          <h3 class="description-heading">Trip Filtering</h3>
+          <p class="description-txt">Evaluates your trip requests.</p>
+        </div>
+        <!-- slide icon -->
+        <div class="col-quarter">
+          <img src="./images/slider-icon.png" alt="slider-icon" class="icon">
+          <h3 class="description-heading">Service Filters</h3>
+          <p class="description-txt">Accepts your ideal trips.</p>
+        </div>
+        <!-- bars icon-->
+        <div class="col-quarter">
+          <img src="./images/bars-icon.png" alt="bars-icon" class="icon">
+          <h3 class="description-heading">Stats + Mileage</h3>
+          <p class="description-txt">Tracks your trips across all apps.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
