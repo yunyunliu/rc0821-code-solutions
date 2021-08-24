@@ -3,6 +3,7 @@
   padding-bottom: 80px;
 }
 
-.overlay {
-  bottom: 100;
+.product-overlay {
+  left: 50px;
+  bottom: 50px;
 }
