@@ -20,13 +20,13 @@
 
 .li-heading {
   font-size: 16px;
-  text-indent: 15px;
+  padding-left: 10px;
+  display: inline;
 }
 
 .roi-list {
   list-style-position: inside;
   width: 50%;
-  align-items: center;
   padding-left: 0;
   text-align: left;
 }
@@ -40,4 +40,9 @@
 .li-text {
   font-size: 14px;
   line-height: 1.5em;
+}
+
+li::marker {
+  font-size: 26px;
+  font-family: 'Tiempos Headline', serif;
 }
