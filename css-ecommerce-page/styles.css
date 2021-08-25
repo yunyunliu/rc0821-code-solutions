@@ -1,0 +1,44 @@
+.row {
+  width: 80%;
+  margin: auto;
+  font-family: 'DM sans', sans-serif;
+}
+
+.col {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.col-fifth {
+  flex-basis: 20%;
+}
+
+.page-heading {
+  font-size: 24px;
+  text-align: center;
+  color: #525351;
+}
+
+/* .img-container {
+  width: 100%;
+} */
+
+img {
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.price {
+  background-color: #fff2e7;
+}
+
+.gray-out-text {
+  color: #ddd;
+}
