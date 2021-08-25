@@ -16,3 +16,23 @@
 .overlay-txt {
   padding-right: 20%;
 }
+
+.product-img {
+  width: 75%;
+  height: auto;
+  padding-top: 20%;
+}
+
+article {
+  padding-top: 20%;
+  padding-right: 50px;
+  line-height: 1.5em;
+}
+
+.make-italic {
+  font-style: italic;
+}
+
+.section1 {
+  padding-bottom: 5%;
+}
