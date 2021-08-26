@@ -1,6 +1,6 @@
 .image-container {
   padding-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 .overlay {
@@ -18,9 +18,7 @@
 }
 
 .product-img {
-  width: 75%;
-  height: auto;
-  padding-top: 20%;
+  padding-top: 75px;
 }
 
 section {
@@ -37,11 +35,35 @@ section {
   padding-bottom: 5%;
 }
 
+.img-care {
+  padding-right: 50px;
+  width: 100%;
+}
+
+.text-population {
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+
+.img-population {
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 100%;
+}
+
 .text-performance {
   padding-top: 40px;
-  padding-left: 50px;
+  padding-left: 75px;
+  padding-right: 0;
+  padding-bottom: 60px;
 }
 
 .img-performance {
+  padding-top: 90px;
   width: 90%;
+  padding-bottom: 60px;
+}
+
+.learn-more {
+  padding-top: 0;
 }
