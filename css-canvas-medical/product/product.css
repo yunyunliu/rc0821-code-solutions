@@ -1,5 +1,5 @@
 .image-container {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 60px;
 }
 
@@ -38,6 +38,11 @@ section {
 .img-care {
   padding-right: 50px;
   width: 100%;
+}
+
+.text-care {
+  padding-right: 0;
+  padding-left: 75px;
 }
 
 .text-population {
