@@ -1,0 +1,13 @@
+.contact-form {
+  color: #cbcbcb;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #c7c8c8;
+}
