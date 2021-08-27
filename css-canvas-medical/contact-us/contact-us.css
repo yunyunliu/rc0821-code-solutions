@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
 }
 
 input::placeholder {
@@ -18,9 +19,13 @@ input::placeholder {
   border-bottom: 1px solid #c7c8c8;
   width: 100%;
   font-size: 20px;
-  padding-top: 50px;
   padding-bottom: 30px;
   margin-bottom: 25px;
+}
+
+.contact-control:focus {
+  outline-width: 1px;
+  outline-color: darkgray;
 }
 
 .contact-input {
@@ -28,9 +33,11 @@ input::placeholder {
 }
 
 .btn-submit {
-  font-size: 14px;
-  width: 70px;
-  height: 30px;
+  font-size: 16px;
+  width: 90px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .contact {
@@ -46,4 +53,14 @@ h2 {
 section.contact {
   padding-right: 50px;
   width: 475px;
+}
+
+label {
+  padding-top: 30px;
+}
+
+.textarea-input {
+  text-align: start;
+  margin-top: 20px;
+  font-family: 'Avenir', sans-serif;
 }
