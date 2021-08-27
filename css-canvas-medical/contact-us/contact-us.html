@@ -38,25 +38,30 @@
         <div class="col">
           <!-- left half col - text -->
           <div class="col-half text-dark-gray">
-            <h1 class="font-tiempos">Get in touch with Canvas</h1>
-            <h2 class="text-blue">&#40;800&#41; 555&ndash;5555</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit asperiores consequuntur
-              illo quaerat cum iusto doloremque maxime quia illum, commodi, adipisci harum porro tempore. Velit
-              dolor commodi quis quos consectetur!
-            </p>
+            <section class="contact">
+              <h1 class="font-tiempos">Get in touch with Canvas</h1>
+              <h2 class="text-blue">&#40;800&#41; 555&ndash;5555</h2>
+              <p class="add-line-height">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit asperiores consequuntur
+                illo quaerat cum iusto doloremque maxime quia illum, commodi, adipisci harum porro tempore. Velit
+                dolor commodi quis quos consectetur!
+              </p>
+            </section>
+
+
           </div>
 
           <!-- right half col - form -->
           <div class="col-half">
-            <form class="contact-form">
-              <input type="text" placeholder="Name" class="contact-input">
-              <input type="text" placeholder="Practice Name" class="contact-input">
-              <input type="email" placeholder="email@domain.com" class="contact-input">
-              <input type="tel" placeholder="Phone (optional)" class="contact-input">
+            <form class="contact-form contact">
+              <input type="text" placeholder="Name" class="contact-control contact-input">
+              <input type="text" placeholder="Practice Name" class="contact-control contact-input">
+              <input type="email" placeholder="email@domain.com" class="contact-control contact-input">
+              <input type="tel" placeholder="Phone (optional)" class="contact-control contact-input">
               <label class="center-align">Tell us more about your practice and interest in Canvas.(optional)
-                <textarea class="contact-input"></textarea>
+                <textarea rows="1" class="contact-control"></textarea>
               </label>
+              <button class="btn btn-submit">Submit</button>
             </form>
           </div>
 

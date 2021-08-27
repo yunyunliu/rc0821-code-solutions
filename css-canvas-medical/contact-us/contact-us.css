@@ -3,20 +3,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 18px;
 }
 
 input::placeholder {
-  font-size: 18px;
+  font-size: 20px;
   color: #cbcbcb;
 }
 
-.contact-input {
+.contact-control {
   text-align: center;
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom: 1px solid #c7c8c8;
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+.contact-input {
+  height: 75px;
+}
+
+.btn-submit {
+  font-size: 14px;
+  width: 70px;
+  height: 30px;
+}
+
+.contact {
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+h1,
+h2 {
+  padding-bottom: 15px;
+}
+
+section.contact {
+  padding-right: 50px;
+  width: 475px;
 }

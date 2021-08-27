@@ -70,6 +70,10 @@
   color: #525351;
 }
 
+.add-line-height {
+  line-height: 1.5em;
+}
+
 /* colors */
 
 .bg-light {
