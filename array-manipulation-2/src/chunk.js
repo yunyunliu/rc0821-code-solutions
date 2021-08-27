@@ -6,9 +6,18 @@
 
 */
 
-// function chunk(array, size) {
-//   const chunks = [];
-//   //if size > length, retun empty array
-//   while coun
+function chunk(array, size) {
+  const chunks = [];
+  if (array.length < size) {
+    return chunks;
+  }
+  let remaining = array.slice();
 
-// }
+  while (remaining.length > size) {
+    const chunk = remaining.slice(0, size);
+    remaining = remaining.slice(size);
+    chunks.push(chunk);
+  }
+  chunks.push(remaining);
+  return chunks;
+}
