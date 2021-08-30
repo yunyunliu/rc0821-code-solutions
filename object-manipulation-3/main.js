@@ -88,6 +88,9 @@ function deal(deck, players, cards) {
     const hand = remaining.slice(0, cards);
     remaining = remaining.slice(cards);
     players[i].hand = hand;
+    const [card1, card2] = hand;
+    const totalValue = card1.value + card2.value;
+    players[i].handValue = totalValue;
   }
 }
 
@@ -102,10 +105,7 @@ console.log('players', players);
 function decideWinner(players) {
   const values = [];
   players.forEach(current => {
-    const hand = current.hand;
-    const [card1, card2] = hand;
-    const total = card1.value + card2.value;
-    values.push(total);
+    values.push(current.handValue);
   });
   const highestVal = Math.max(...values);
 
