@@ -1,13 +1,19 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 // create 4 players
-// function makePlayer(name) {
-//   return {
-//     name,
-//     hand: []
-//   };
-// }
+function createPlayers(names) {
+  const players = [];
+  names.forEach(current => {
+    const player = {
+      name: current,
+      hand: []
+    };
+    players.push(player);
+  });
+  return players;
+}
 
-// create cards
+const names = ['Yunyun', 'Mikko', 'Valerie', 'Karina'];
+// console.log('players', createPlayers(names));
 
 function createSuite(suite) {
   const cards = [];
@@ -54,4 +60,57 @@ function createDeck() {
   return deck;
 }
 
-console.log('deck', createDeck());
+// console.log('deck', createDeck());
+
+function shuffle(deck) {
+  const indexes = [];
+  const shuffled = [];
+  for (let i = 0; i < deck.length; i++) {
+    let randomIndex = Math.floor(Math.random() * 53);
+    while (indexes.includes(randomIndex)) {
+      randomIndex = Math.floor(Math.random() * 53);
+    }
+    indexes.push(randomIndex);
+  }
+  for (let i = 0; i < indexes.length; i++) {
+    const index = indexes[i];
+    const card = deck[index];
+    shuffled.push(card);
+  }
+  return shuffled;
+}
+
+// console.log('indexes', shuffle(createDeck()));
+
+function deal(deck, players, cards) {
+  let remaining = deck.slice(); // copy of deck
+  for (let i = 0; i < players.length; i++) {
+    const hand = remaining.slice(0, cards);
+    remaining = remaining.slice(cards);
+    players[i].hand = hand;
+  }
+}
+
+const deck = createDeck();
+const shuffledDeck = shuffle(deck);
+
+const players = createPlayers(names);
+deal(shuffledDeck, players, 2);
+
+console.log('players', players);
+
+function decideWinner(players) {
+  const values = [];
+  players.forEach(current => {
+    const hand = current.hand;
+    const [card1, card2] = hand;
+    const total = card1.value + card2.value;
+    values.push(total);
+  });
+  const highestVal = Math.max(...values);
+
+  const winner = players[values.indexOf(highestVal)];
+  console.log(winner.name, 'wins!', 'winning hand:', winner.hand);
+}
+
+decideWinner(players);
