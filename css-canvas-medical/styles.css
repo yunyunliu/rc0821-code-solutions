@@ -62,6 +62,18 @@
   font-size: 14px;
 }
 
+.text-blue {
+  color: #294464;
+}
+
+.text-dark-gray {
+  color: #525351;
+}
+
+.add-line-height {
+  line-height: 1.5em;
+}
+
 /* colors */
 
 .bg-light {
