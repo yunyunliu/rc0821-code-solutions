@@ -1,0 +1,27 @@
+.phrase {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+}
+
+.correct {
+  color: #27c441;
+}
+
+.current {
+  border-bottom: solid 2px black;
+}
+
+.wrong {
+  color: red;
+  border-bottom: solid 2px red;
+}
