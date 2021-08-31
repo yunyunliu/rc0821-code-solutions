@@ -14,32 +14,62 @@ function setFirstNodeAsCurrent(nodelist) {
   $first.classList.add('current');
 }
 
-const prompt = 'grumpy wizards make toxic brew';
-setPhrase(prompt);
+const phrase = 'hello world';
+setPhrase(phrase);
 
 const characterNodelist = document.querySelectorAll('span');
 setFirstNodeAsCurrent(characterNodelist);
 
 let characterCount = 0;
+let correct = 0;
+let incorrect = 0;
+
+function getRoundedAccuracy() {
+  const accuracy = correct / (correct + incorrect);
+  return (accuracy * 100) / 100;
+}
+
+function handleFinished() {
+  const $dialog = document.createElement('dialog');
+  const $accuracy = document.createElement('p');
+  $accuracy.textContent = `Your accuracy is ${getRoundedAccuracy()}!`;
+  const $close = document.createElement('button');
+  $close.textContent =
+  // $playAgain.textContent = 'Play again?';
+  $dialog.appendChild($accuracy);
+  document.body.appendChild($dialog);
+  $dialog.showModal();
+}
 
 function checkKeystroke(e) {
-  const $current = characterNodelist[characterCount];
-  if ($current.textContent === '') {
-    $current.textContent = ' ';
-  }
-  $current.classList.add('current');
-  //  console.log(e.key, e.code)
-  if (e.key === $current.textContent) {
-    $current.classList.add('correct');
-    $current.classList.remove('wrong', 'current');
-    const $next = characterNodelist[characterCount + 1];
-    $next.classList.add('current');
-    characterCount++;
+  if (characterCount < (characterNodelist.length)) {
+    const $current = characterNodelist[characterCount];
+    if ($current.textContent === '') {
+      $current.textContent = ' ';
+    }
+    $current.classList.add('current');
+    //  console.log(e.key, e.code)
+    if (e.key === $current.textContent) {
+      $current.classList.add('correct');
+      $current.classList.remove('wrong', 'current');
+      characterCount++;
+      const $next = characterNodelist[characterCount];
+      if ($next) {
+        $next.classList.add('current');
+      }
+      correct++;
+    } else {
+      $current.classList.add('wrong');
+      incorrect++;
+    }
   } else {
-    $current.classList.add('wrong');
+    handleFinished();
+    characterCount = 0;
+    correct = 0;
+    incorrect = 0;
   }
   // console.log('key', e.key, 'keyCode', e.code);
-
 }
 
 document.addEventListener('keydown', checkKeystroke);
+// document.addEventListener('keyup', handleFinished);
