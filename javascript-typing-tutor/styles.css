@@ -8,27 +8,20 @@
 body {
   display: flex;
   justify-content: center;
-}
-
-span {
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 800;
-}
-
-span:first-child {
-  text-decoration: underline;
-  text-decoration-color: black;
 }
 
 .correct {
   color: yellowgreen;
 }
 
-.wrong {
-  color: red;
+.current {
+  border-bottom: solid 2px black;
 }
 
-.current {
-  text-decoration: underline;
+.wrong {
+  color: red;
+  border-bottom: solid 2px red;
 }
