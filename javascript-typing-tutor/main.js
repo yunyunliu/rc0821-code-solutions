@@ -26,19 +26,23 @@ let incorrect = 0;
 
 function getRoundedAccuracy() {
   const accuracy = correct / (correct + incorrect);
-  return (accuracy * 100) / 100;
+  const str = accuracy + '';
+  const truncated = str.slice(0, 4);
+  return truncated;
 }
 
 function handleFinished() {
-  const $dialog = document.createElement('dialog');
-  const $accuracy = document.createElement('p');
-  $accuracy.textContent = `Your accuracy is ${getRoundedAccuracy()}!`;
-  const $close = document.createElement('button');
-  $close.textContent =
-  // $playAgain.textContent = 'Play again?';
-  $dialog.appendChild($accuracy);
-  document.body.appendChild($dialog);
-  $dialog.showModal();
+  if (characterCount === characterNodelist.length - 1) {
+    const $dialog = document.createElement('dialog');
+    const $accuracy = document.createElement('p');
+    $accuracy.textContent = `Your accuracy is ${getRoundedAccuracy()}!`;
+    const $close = document.createElement('button');
+    $close.textContent =
+    // $playAgain.textContent = 'Play again?';
+    $dialog.appendChild($accuracy);
+    document.body.appendChild($dialog);
+    $dialog.showModal();
+  }
 }
 
 function checkKeystroke(e) {
@@ -62,14 +66,8 @@ function checkKeystroke(e) {
       $current.classList.add('wrong');
       incorrect++;
     }
-  } else {
-    handleFinished();
-    characterCount = 0;
-    correct = 0;
-    incorrect = 0;
   }
-  // console.log('key', e.key, 'keyCode', e.code);
 }
 
 document.addEventListener('keydown', checkKeystroke);
-// document.addEventListener('keyup', handleFinished);
+document.addEventListener('keyup', handleFinished);
