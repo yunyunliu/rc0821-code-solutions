@@ -1,0 +1,35 @@
+.image-container {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.overlay {
+  left: 8%;
+  top: 35%;
+  width: 60%;
+}
+
+.overlay-heading {
+  padding-right: 0;
+}
+
+.overlay-txt {
+  padding-right: 20%;
+}
+
+.believe-text {
+  width: 50%;
+  text-align: left;
+}
+
+.believe-heading {
+  padding-top: 0;
+}
+
+.text {
+  align-items: center;
+}
+
+.bottom-bold {
+  font-weight: 900;
+}
