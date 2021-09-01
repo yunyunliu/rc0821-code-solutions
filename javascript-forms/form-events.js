@@ -29,7 +29,6 @@ $textArea.addEventListener('blur', handleBlur);
 $textArea.addEventListener('input', handleInput);
 
 const $contactForm = document.querySelector('#contact-form');
-console.log($contactForm.elements);
 $contactForm.addEventListener('submit', e => {
   e.preventDefault();
   const emailVal = $contactForm.elements.email.value;
