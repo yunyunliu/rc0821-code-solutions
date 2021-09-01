@@ -39,27 +39,81 @@
 }
 
 .team-heading {
-  padding-top: 50px;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .headshot-container {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: contain;
 }
 
-.headshot {
-  max-height: 100%;
-  max-width: auto;
+.headshot-denis {
+  background-image: url('../images/about-us/team-members/denis.jpg');
+}
+
+.headshot-andrew {
+  background-image: url('../images/about-us/team-members/andrew.png');
+}
+
+.headshot-mel {
+  background-image: url('../images/about-us/team-members/mel.jpg');
+}
+
+.headshot-beau {
+  background-image: url('../images/about-us/team-members/bean.jpg');
+}
+
+.headshot-julian {
+  background-image: url('../images/about-us/team-members/julian.jpg');
+}
+
+.headshot-michael {
+  background-image: url('../images/about-us/team-members/michael.jpg');
+}
+
+.headshot-jessica {
+  background-image: url('../images/about-us/team-members/jessica.jpg');
+}
+
+.headshot-pedro {
+  background-image: url('../images/about-us/team-members/pedro.jpeg');
+}
+
+.headshot-you {
+  background-image: url('../images/about-us/team-members/you.png');
 }
 
 .col-third {
   flex-basis: calc(100% / 3);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.portrait-gallery {
+  display: flex;
+  padding-top: 20px;
+}
+
+.team {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name {
+  margin-bottom: 0;
+}
+
+.position {
+  margin-top: 12px;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 40px;
 }
