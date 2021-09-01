@@ -93,7 +93,7 @@
 .col-third {
   flex-basis: calc(100% / 3);
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -109,6 +109,7 @@
 
 .name {
   margin-bottom: 0;
+  font-family: 'Tiempos Headline', serif;
 }
 
 .position {
@@ -116,4 +117,21 @@
   text-align: center;
   width: 90%;
   margin-bottom: 40px;
+  font-weight: 200;
+}
+
+.heading-container {
+  display: flex;
+
+  /* justify-content: center; */
+}
+
+.advisory-heading {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.board-members {
+  display: flex;
+  flex-direction: row;
 }
