@@ -42,3 +42,15 @@ input::placeholder {
   height: 40px;
   width: 120px;
 }
+
+.img-blog {
+  width: 80%;
+  height: auto;
+}
+
+article.col-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
