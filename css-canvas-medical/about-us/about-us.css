@@ -1,0 +1,171 @@
+.image-container {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.overlay {
+  left: 8%;
+  top: 35%;
+  width: 60%;
+}
+
+.overlay-heading {
+  padding-right: 0;
+}
+
+.overlay-txt {
+  padding-right: 20%;
+}
+
+.believe-text {
+  width: 50%;
+  text-align: left;
+}
+
+.believe-heading {
+  padding-top: 0;
+}
+
+.text {
+  align-items: center;
+}
+
+.bottom-bold {
+  font-weight: 900;
+}
+
+.text-section {
+  padding-bottom: 60px;
+}
+
+.team-heading {
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #525351;
+}
+
+.headshot-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
+.headshot-denis {
+  background-image: url('../images/about-us/team-members/denis.jpg');
+}
+
+.headshot-andrew {
+  background-image: url('../images/about-us/team-members/andrew.png');
+}
+
+.headshot-mel {
+  background-image: url('../images/about-us/team-members/mel.jpg');
+}
+
+.headshot-beau {
+  background-image: url('../images/about-us/team-members/bean.jpg');
+}
+
+.headshot-julian {
+  background-image: url('../images/about-us/team-members/julian.jpg');
+}
+
+.headshot-michael {
+  background-image: url('../images/about-us/team-members/michael.jpg');
+}
+
+.headshot-jessica {
+  background-image: url('../images/about-us/team-members/jessica.jpg');
+}
+
+.headshot-pedro {
+  background-image: url('../images/about-us/team-members/pedro.jpeg');
+}
+
+.headshot-you {
+  background-image: url('../images/about-us/team-members/you.png');
+}
+
+.col-third {
+  flex-basis: calc(100% / 3);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.portrait-gallery {
+  display: flex;
+  padding-top: 20px;
+}
+
+.team {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name {
+  margin-bottom: 0;
+  font-family: 'Tiempos Headline', serif;
+  color: #525351;
+}
+
+.portrait-gallery-col {
+  justify-content: flex-end;
+}
+
+.position {
+  margin-top: 12px;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 40px;
+  font-weight: 100;
+  font-size: 14px;
+  color: #525351;
+}
+
+.heading-container {
+  display: flex;
+}
+
+.advisory-heading {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 200;
+}
+
+.board-members {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #525351;
+}
+
+.advisory-board-row {
+  padding-bottom: 70px;
+}
+
+.story-row {
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+.story-heading {
+  text-align: center;
+  font-weight: 100;
+}
+
+.article-story {
+  padding: 0 250px;
+}
+
+.article-text {
+  font-size: 14px;
+  color: #525351;
+  line-height: 1.5em;
+  margin-top: 0;
+}
