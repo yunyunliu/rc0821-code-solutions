@@ -57,6 +57,46 @@ var pokedex = [
   }
 ];
 
-// function renderPokemon(pokemon) {
-//   const $thi
-// }
+function renderPokemon(pokemon) {
+  // make div element and set class
+  const $colThird = document.createElement('div');
+  $colThird.classList.add('column-third');
+  // create div element and set class
+  const $pokemonCard = document.createElement('div');
+  $pokemonCard.classList.add('pokemon-card');
+  // attach .pokemon-card as child of .third-col
+  $colThird.appendChild($pokemonCard);
+  // create img element
+  const $pokeImage = document.createElement('img');
+  // add src and alt attributes
+  $pokeImage.setAttribute('src', pokemon.imageUrl);
+  $pokeImage.setAttribute('alt', pokemon.name);
+
+  // make div element and set class
+  const $pokemonCardText = document.createElement('div');
+  $pokemonCardText.classList.add('pokemon-card-text');
+
+  // create elements to hold text and add text
+  const $name = document.createElement('h2');
+  $name.textContent = pokemon.name;
+
+  const $number = document.createElement('h3');
+  $number.textContent = pokemon.number;
+
+  const $description = document.createElement('p');
+  $description.textContent = pokemon.description;
+  $pokemonCardText.append($name, $number, $description);
+  $pokemonCard.append($pokeImage, $pokemonCardText);
+
+  return $colThird;
+}
+
+const bulbasaur = pokedex[0];
+renderPokemon(bulbasaur);
+
+const $row = document.querySelector('.row');
+
+pokedex.forEach(pokemon => {
+  const $pokemon = renderPokemon(pokemon);
+  $row.appendChild($pokemon);
+});
