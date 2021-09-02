@@ -48,6 +48,12 @@ input::placeholder {
   height: auto;
 }
 
+.img-blog4 {
+  width: 90%;
+  height: 300px;
+  object-fit: contain;
+}
+
 article.col-half {
   display: flex;
   flex-direction: column;
@@ -72,7 +78,7 @@ article.col-half {
 }
 
 .info-left {
-  padding-left: 70px;
+  padding-left: 50px;
 
   /* padding-right: 10px; */
 }
