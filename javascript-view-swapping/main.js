@@ -10,7 +10,7 @@ function handleTabClick({ target }) {
   for (let i = 0; i < tabNodelist.length; i++) {
     const $node = tabNodelist[i];
     // console.log('$node textContent', $node.textContent);
-    $node.textContent === target.textContent
+    $node.isEqualNode(target)
       ? $node.classList.add('active')
       : $node.classList.remove('active');
   }
