@@ -1,0 +1,113 @@
+.form-subscribe {
+  margin: 50px;
+  align-items: center;
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: #cbcbcb;
+}
+
+.input-email {
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #c7c8c8;
+  width: 50%;
+  font-size: 20px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.input-email:focus {
+  outline-width: 1px;
+  outline-color: darkgray;
+}
+
+.heading-news {
+  font-size: 26px;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+}
+
+.header-news {
+  margin-top: 30px;
+}
+
+.btn-subscribe {
+  margin: 15px;
+  height: 40px;
+  width: 120px;
+}
+
+.img-blog {
+  width: 90%;
+  height: auto;
+}
+
+.img-blog4 {
+  width: 90%;
+  height: 300px;
+  object-fit: contain;
+}
+
+article.col-half {
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: center; */
+  text-align: left;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.blog-heading {
+  font-size: 24px;
+  width: 90%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.author {
+  width: 100%;
+
+  /* padding-left: 60px; */
+}
+
+.info-left {
+  padding-left: 50px;
+
+  /* padding-right: 10px; */
+}
+
+.info-right {
+  padding-right: 60px;
+}
+
+.left-author {
+  margin-left: 0;
+}
+
+.right-col {
+  margin-left: 20px;
+}
+
+.left-col {
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.bottom-articles {
+  padding-bottom: 50px;
+}
+
+.info-mending {
+  width: 100%;
+}
+
+/* .info-launching {
+
+} */
