@@ -16,6 +16,8 @@ function handleTabClick({ target }) {
   }
 
   const targetView = target.getAttribute('data-view');
+  // remove .hidden from view node that matches target
+  // adds .hidden to all others
   for (let i = 0; i < viewNodelist.length; i++) {
     const $node = viewNodelist[i];
     // console.log('$node', $node)
