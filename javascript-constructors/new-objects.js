@@ -21,4 +21,4 @@ console.log('newNumber type:', typeof newNumber);
 // Boolean
 const newBoolean = new Boolean();
 console.log('newBoolean:', newBoolean);
-console.log('newBoolean type:', typeof newBooleannewBooleannewBooleannewBoolean);
+console.log('newBoolean type:', typeof newBoolean);
