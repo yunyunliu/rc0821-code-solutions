@@ -31,9 +31,12 @@ Bank.prototype.getAccount = function (number) {
 };
 
 Bank.prototype.getTotalAssets = function () {
-  let total = 0;
-  this.accounts.forEach(account => {
-    total += account.getBalance();
+  if (this.accounts.length > 0) {
+    let total = 0;
+    this.accounts.forEach(account => {
+      total += account.getBalance();
+    });
     return total;
-  });
+  }
+  return 0;
 };
