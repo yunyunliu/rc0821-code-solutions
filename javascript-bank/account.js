@@ -1,10 +1,12 @@
 /* exported Account */
+// constructor
 function Account(number, holder) {
   this.number = number;
   this.holder = holder;
   this.transactions = [];
 }
 
+// prototype methods
 Account.prototype.deposit = function (amount) {
   if (amount &&
     typeof amount === 'number' &&
