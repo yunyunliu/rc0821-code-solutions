@@ -8,12 +8,8 @@ function Bank() {
 
 // prototype methods
 Bank.prototype.openAccount = function (holder, balance) {
-  if (balance &&
-    typeof balance === 'number' &&
-    balance > 0 &&
-    (balance % 1 === 0)) {
-    const newAccount = new Account(this.nextAccountNumber, holder);
-    newAccount.deposit(balance);
+  const newAccount = new Account(this.nextAccountNumber, holder);
+  if (newAccount.deposit(balance)) {
     this.accounts.push(newAccount);
     const accountNumber = this.nextAccountNumber;
     this.nextAccountNumber++;
