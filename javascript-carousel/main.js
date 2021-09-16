@@ -14,6 +14,8 @@ function createButtons() {
     // console.log('button ' + i, $button)
     $dotsRow.append($button);
   });
+  const $first = document.getElementById(images[0].alt);
+  $first.classList.add('fill');
 }
 
 function fillSelectedButton() {
@@ -40,6 +42,7 @@ function switchImage(index = count) {
   const image = images[count];
   $carouselImage.setAttribute('src', image.src);
   $carouselImage.setAttribute('alt', image.alt);
+  $carouselImage.setAttribute('data-order', index);
   fillSelectedButton();
 }
 
@@ -94,11 +97,14 @@ $dotsRow.addEventListener('click', ({ target }) => {
 });
 
 $nextButton.addEventListener('click', () => {
-  count++;
+  const nextCount = Number.parseInt($carouselImage.getAttribute('data-order')) + 1;
+  console.log('next:', nextCount)
+  count = nextCount;
   switchAndReset();
 });
 
 $previousButton.addEventListener('click', () => {
-  count--;
+  const prevCount = Number.parseInt($carouselImage.getAttribute('data-order')) - 1;
+  count = prevCount;
   switchAndReset();
 });
