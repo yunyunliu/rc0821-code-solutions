@@ -1,4 +1,7 @@
+
 let count = 1;
+
+let interval;
 
 const images = [
   {

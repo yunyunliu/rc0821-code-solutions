@@ -1,19 +1,44 @@
+const $dotsRow = document.getElementById('dot-container');
+
 const $carouselImage = document.getElementById('carousel-image');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const interval = setInterval(() => {
+function createButtons() {
+  images.forEach((image, i) => {
+    const $button = document.createElement('button');
+    $button.setAttribute('src', image.src);
+    $button.setAttribute('src', image.alt);
+    $button.setAttribute('id', image.alt);
+    $button.setAttribute('class', 'btn-round');
+    $button.setAttribute('data-order', i);
+    // console.log('button ' + i, $button)
+    $dotsRow.append($button);
+  });
+}
+
+function switchImage(index) {
+  const image = images[index];
+  $carouselImage.setAttribute('src', image.src);
+  $carouselImage.setAttribute('alt', image.alt);
+}
+
+function startInterval() {
+  interval = setInterval(() => {
     if (count === images.length) {
       count = 0;
     }
-    console.log('count', count)
-    const image = images[count];
-    $carouselImage.setAttribute('src', image.src);
-    $carouselImage.setAttribute('alt', image.alt);
+    // console.log('count', count)
+    switchImage(count);
+    // const image = images[count];
+    // $carouselImage.setAttribute('src', image.src);
+    // $carouselImage.setAttribute('alt', image.alt);
     count++;
   }, 3000);
-});
+}
 
-const $dotsRow = document.getElementById('dot-container');
+document.addEventListener('DOMContentLoaded', () => {
+  createButtons();
+  startInterval();
+});
 
 $dotsRow.addEventListener('click', ({ target }) => {
   if (target.tagName !== 'BUTTON') {
@@ -30,5 +55,10 @@ $dotsRow.addEventListener('click', ({ target }) => {
       $button.classList.remove('fill');
     }
   }
+  const order = Number.parseInt(target.getAttribute('data-order'));
+  console.log('button data-order:', order);
+  count = order;
+  // clearInterval(interval);
+  switchImage(count);
   // console.log('target', e.target)
 });
