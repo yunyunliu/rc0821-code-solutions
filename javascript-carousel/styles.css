@@ -1,6 +1,6 @@
 .row {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   /* margin: auto; */
   /* justify-content: space-between; */
 }
@@ -26,4 +26,18 @@
   height: 40px;
   background-color: white;
   border: none;
+}
+
+.btn-round {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  /* display: inline-block; */
+  border-color: black;
+  margin: 0 5px;
+}
+
+.fill {
+  background-color: black;
 }
