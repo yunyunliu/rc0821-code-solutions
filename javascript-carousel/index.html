@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- row 1 -->
+  <div class="row">
+     <!-- previous -->
+    <div class="column-sixth flex justify-center">
+      <button id="previous" class="btn-arrow">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+
+      <!-- carousel image -->
+    <div class="img-container flex justify-center">
+      <img src="images/001.png" alt="bulbasaur">
+    </div>
+
+    <!-- next  -->
+    <div class="column-sixth flex justify-center">
+      <button id="next" class="btn-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+  <!-- row 2 -->
+  <div class="dots row"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
