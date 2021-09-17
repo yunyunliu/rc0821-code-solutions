@@ -32,7 +32,7 @@ function fillSelectedButton() {
   }
 }
 
-function switchImage(index = count) {
+function switchImage() {
   if (count === images.length) {
     count = 0;
   }
@@ -42,23 +42,13 @@ function switchImage(index = count) {
   const image = images[count];
   $carouselImage.setAttribute('src', image.src);
   $carouselImage.setAttribute('alt', image.alt);
-  $carouselImage.setAttribute('data-order', index);
+  $carouselImage.setAttribute('data-order', count);
   fillSelectedButton();
 }
 
 function startInterval() {
   interval = setInterval(() => {
-    // if (count === images.length) {
-    //   count = 0;
-    // }
-    // if (count < 0) {
-    //   count = images.length - 1;
-    // }
-    // console.log('count', count)
     switchImage();
-    // const image = images[count];
-    // $carouselImage.setAttribute('src', image.src);
-    // $carouselImage.setAttribute('alt', image.alt);
     count++;
   }, 3000);
 }
@@ -78,27 +68,13 @@ $dotsRow.addEventListener('click', ({ target }) => {
   if (target.tagName !== 'BUTTON') {
     return;
   }
-  // remove .fill class from previous element
-  // const roundButtons = document.querySelectorAll('.btn-round');
-  // for (let i = 0; i < roundButtons.length; i++) {
-  //   const $button = roundButtons[i];
-  //   // console.log('$button ', $button)
-  //   if ($button === target) {
-  //     $button.classList.add('fill');
-  //   } else {
-  //     $button.classList.remove('fill');
-  //   }
-  // }
   const order = Number.parseInt(target.getAttribute('data-order'));
   count = order;
-  // console.log('button data-order:', order);
   switchAndReset();
-  // console.log('target', e.target)
 });
 
 $nextButton.addEventListener('click', () => {
   const nextCount = Number.parseInt($carouselImage.getAttribute('data-order')) + 1;
-  console.log('next:', nextCount)
   count = nextCount;
   switchAndReset();
 });
