@@ -4,10 +4,10 @@ const $nextButton = document.getElementById('next');
 const $previousButton = document.getElementById('previous');
 
 function createButtons() {
-  images.forEach((image, i) => {
+  data.images.forEach((image, i) => {
     const $button = document.createElement('button');
     $button.setAttribute('src', image.src);
-    $button.setAttribute('src', image.alt);
+    $button.setAttribute('alt', image.alt);
     $button.setAttribute('id', image.alt);
     $button.setAttribute('class', 'btn-round');
     $button.setAttribute('data-order', i);
@@ -24,7 +24,7 @@ function fillSelectedButton() {
   for (let i = 0; i < roundButtons.length; i++) {
     const $button = roundButtons[i];
     // console.log('$button ', $button)
-    if ($button.getAttribute('data-order') == count) {
+    if ($button.getAttribute('data-order') == data.current) {
       $button.classList.add('fill');
     } else {
       $button.classList.remove('fill');
@@ -33,31 +33,34 @@ function fillSelectedButton() {
 }
 
 function switchImage() {
-  if (count === images.length) {
-    count = 0;
+  // if showing the last image in array
+  if (data.current === data.images.length) {
+    data.current = 0;
   }
-  if (count < 0) {
-    count = images.length - 1;
+  // if showing the first image in array
+  if (data.current < 0) {
+    data.current = data.images.length - 1;
   }
-  const image = images[count];
+  // console.log('data.current:', data.current)
+  const image = data.images[data.current];
   $carouselImage.setAttribute('src', image.src);
   $carouselImage.setAttribute('alt', image.alt);
-  $carouselImage.setAttribute('data-order', count);
+  $carouselImage.setAttribute('data-order', data.current);
   fillSelectedButton();
 }
 
 function startInterval() {
-  interval = setInterval(() => {
+  data.interval = setInterval(() => {
     switchImage();
-    count++;
+    data.current++;
   }, 3000);
 }
 
-function switchAndReset() {
-  clearInterval(interval);
-  switchImage();
-  startInterval();
-}
+// function switchAndReset() {
+//   clearInterval(data.interval);
+//   switchImage();
+//   startInterval();
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   createButtons();
@@ -69,18 +72,19 @@ $dotsRow.addEventListener('click', ({ target }) => {
     return;
   }
   const order = Number.parseInt(target.getAttribute('data-order'));
-  count = order;
-  switchAndReset();
+  data.current = order;
+  // switchAndReset();
+  switchImage();
 });
 
 $nextButton.addEventListener('click', () => {
-  const nextCount = Number.parseInt($carouselImage.getAttribute('data-order')) + 1;
-  count = nextCount;
-  switchAndReset();
+  const next = Number.parseInt($carouselImage.getAttribute('data-order')) + 1;
+  data.current = next;
+  switchImage();
 });
 
 $previousButton.addEventListener('click', () => {
-  const prevCount = Number.parseInt($carouselImage.getAttribute('data-order')) - 1;
-  count = prevCount;
-  switchAndReset();
+  const prev = Number.parseInt($carouselImage.getAttribute('data-order')) - 1;
+  data.current = prev;
+  switchImage();
 });

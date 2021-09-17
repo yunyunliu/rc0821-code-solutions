@@ -1,6 +1,4 @@
 
-let count = 1;
-
 let interval;
 
 const images = [
@@ -25,3 +23,9 @@ const images = [
     src: 'images/039.png'
   }
 ];
+
+let data = {
+  current: 0,
+  images: images,
+  interval: null
+};
