@@ -1,0 +1,500 @@
+  101  git add -a 
+  102  git add -u
+  103  git cim 'handle find removes apostrophes from creature names' --no-verify
+  104  git st
+  105  git add -u
+  106  git cim 'handle edit sets data.editing back to null' --no-verify'
+  107  git cim 'handle edit sets data.editing back to null' --no-verify
+  108  git push origin feature-4
+  109  git st
+  110  git add -u
+  111  git cim 'only prepend updated entry if its commment has been changed' --no-verify
+  112  git st
+  113  git add -u
+  114  git cim 'remove commented out code' --no-verify
+  115  git push origin feature-5
+  116  cd repos
+  117  ls
+  118  cd ajax-project/
+  119  git remote set-url origin git@github.com:yunyunliu/ajax-project.git
+  120  git remote -v
+  121  cd ..
+  122  cd ajax-project/
+  123  git st
+  124  git add -u 
+  125  git cim 'increase width of li elements in list view; add left and right padding' --no-verify
+  126  git st
+  127  git add -u 'change  breakpoint for column-third so columns change before text starts overlapping;align comment and title ' --no-verify
+  128  git add -u
+  129  git cim 'change breakpoint for column-third so columns change before text starts overlapping;align comments' --no-verify 
+  130  git st
+  131  git add -u
+  132  git cim 'add padding to select creature type label' --no-verify
+  133  git push origin feature-5 
+  134  git swm 
+  135  git pl
+  136  git merge feature-5
+  137  git st
+  138  git add -u
+  139  git cim 'remove incomplete code that was preventing application from running' --no-verify
+  140  git push origin master
+  141  git st
+  142  git add -u
+  143  git cim 'replace all spaces before adding user input to api endpoint' --no-verify'
+  144  git cim 'replace all spaces before adding user input to api endpoint' --no-verify
+  145  git push origin master
+  146  git swc issue-6
+  147  git st
+  148  git add -u 
+  149  git cim 'add HTML and styling to modal for confirming delete' --no-verify
+  150  git st
+  151  cd repos/
+  152  cd ajax-project/
+  153  git st
+  154  git add -u
+  155  git cim 'add functionality to confirmatin modal buttons' --no-verify
+  156  git push origin issue-6
+  157  git swm
+  158  git merge issue-6
+  159  git push origin master
+  160  git st
+  161  git add -u
+  162  git cim 'replace original favicon with "bells" image' --no-verify
+  163  git push origin master
+  164  cd repos/
+  165  cd ajax-project/
+  166  git swc polish-12
+  167  git st
+  168  git add -u
+  169  git cim 'attach handleFInd event handler to form element instead of button; change  handleFind() to respond to "submit" event; trimm whitespace from input before using' --no-verify
+  170  git st
+  171  git add -u
+  172  git cim 'remove console logs and unused code' --no-verify
+  173  git push origin polish-12 
+  174  git swm
+  175  git merge polish-12
+  176  git push origin master
+  177  git swc issue-13
+  178  cd repos
+  179  cd ajax-project/
+  180  git st
+  181  git add -u
+  182  git cim 'add detail button to list view' --no-veriffy
+  183  git cim 'add detail button to list view' --no-verify
+  184  git swm
+  185  git swm
+  186  git st
+  187  git stash
+  188  git swm
+  189  git swc portfolio-prep
+  190  git st
+  191  git add -u 
+  192  git cim 'change all buttons to move slightly on hover; "view catch list" button changes color on hover' --no-verify
+  193  git st
+  194  git add -u
+  195  git cim 'add darken on hover effects to buttons on edit and delete modal' --no-verify
+  196  git st 
+  197  git add -u
+  198  git cim 'create css files for desktop, tablet, and phone styles; add media attribute to link element; add CSS spinner element' --no-verify
+  199  git st
+  200  git add -u
+  201  git cim 'spinner is shown after network request sent and hidden when response received' --no-verify
+  202  git st
+  203  git add -u
+  204  git cim 'adjust margins on list items' --no-verify
+  205  git st
+  206  git add -u
+  207  git cim 'change max-width of form in find view' --no-verify
+  208  git st
+  209  git -u
+  210  git add  -u
+  211  git cim 'save as refactor; currently working' --no-verify
+  212  git st
+  213  git add -u
+  214  git cim 'move functionality that fills in result view with response data to separate function; ' --no-verify
+  215  git st
+  216  git add -u
+  217  git cim 'separate code that formates user inputs into an api endpoint and code that makes api call into their own functions' --no-verify
+  218  git branch -M portfolio-prep polish-interface
+  219  git push origin polish-interface
+  220  git st
+  221  git add -u
+  222  git cim 'create separate file for functions helpful for debugging; add function that can be called from console to shhow result view with filled in info' --no-verify
+  223  git st
+  224  git add -u
+  225  git cim 'fix breakpoint problems with layout' --no-verify
+  226  git st
+  227  git add -u
+  228  git cim 'change layout for result view so that the content is spread over 2 columns at desktop widths' --no-verify
+  229  git st
+  230  git add -u"
+  231  git add -u
+  232  git cim 'adjust css' --no-verify
+  233  git reset --hard
+  234  git last
+  235  git hist
+  236  git st
+  237  git add -u
+  238  git cim 'replace accidentally removed return statement' --no-verify'
+  239  git cim 'replace accidentally removed return statement' --no-verify
+  240  git swm
+  241  git sw polish-interface 
+  242  git push origin polish-interface 
+  243  git swm
+  244  git merge polish-interface
+  245  git push origin master
+  246  git branch
+  247  git sw polish-interface 
+  248  git st
+  249  git add -u
+  250  git cim 'change cursor on all buttons to pointer' --no-verify
+  251  git swm
+  252  git merge polish-interface
+  253  git swc issue-13
+  254  git st
+  255  git add -u
+  256  git cim 'make creature name in each list item a button element and style' --no-verify
+  257  git reset --hard
+  258  git last
+  259  git st
+  260  git add -u 
+  261  git cim 'creature name button in list items switches to details view and commenting still works' --add-verify
+  262  git cim 'creature name button in list items switches to details view and commenting still works' --add-verify
+  263  git cim 'creature name button in list items switches to details view and commenting still works' --no-verify
+  264  git st
+  265  git st
+  266  git add -a
+  267  git add -u
+  268  git cim 'creature names in list view switch to detail view when clicked' --no-verify
+  269  cd repos/
+  270  ajax-project/
+  271  cd ajax-project/
+  272  git branch
+  273  git swc issue-15
+  274  git st
+  275  git add -u
+  276  git add js/
+  277  git st
+  278  git st
+  279  git cim 'move functions in data.js and main.js to separate files to make things more readable' --no-verify
+  280  git st
+  281  git add -u
+  282  git add js/
+  283  git st
+  284  git cim 'separate functions that create resultView into their own file' --no-verify'
+  285  git cim 'separate functions that create resultView into their own file' --no-verify
+  286  git branch -M issue-15 refactor
+  287  git swm
+  288  git st
+  289  git add -u
+  290  git cim 'save before merge into master'--no-verify
+  291  git cim 'save before merge into master' --no-verify
+  292  git swm
+  293  git merge refactor
+  294  git push origin master
+  295  git swc bugfix-16
+  296  git reset --hard
+  297  git swm
+  298  git st
+  299  git add -u
+  300  git cim 'currently working' --no-verify
+  301  git st
+  302  git add -u
+  303  git cim 'editing entries without change anything not longer treated as an edit' --noverify
+  304  git cim 'editing entries without change anything not longer treated as an edit' --no-verify
+  305  git push origin master
+  306  git swc code-cleanup
+  307  git rm js/helpers.js
+  308  git st
+  309  git add -u
+  310  git cim 'untrack file containing functions only used during development' --no-verify
+  311  git st
+  312  git last
+  313  git add -u
+  314  git cim 'put form controls in edit modal inside form element' --no-verify
+  315  git st
+  316  git swm
+  317  git stash
+  318  git swm
+  319  git swm
+  320  git merge code-cleanup
+  321  git swc fix-css-mobile
+  322  git branch -M fix-css-mobile issue-17
+  323  cd repos/ajax-project/
+  324  code .
+  325  git reset --hard
+  326  cd ..
+  327  cd code-journal/
+  328  git reset --hard
+  329  cd ..
+  330  cd ajax-project/
+  331  git st
+  332  git -u
+  333  git add -u
+  334  git cim 'add html and css for top nav bar' --no-verify
+  335  git reset --hard
+  336  git swm
+  337  git stash
+  338  git swm
+  339  git hist
+  340  git co 1179ba3
+  341  git hist
+  342  git co f12ad7f
+  343  git swm
+  344  cd repos/ajax-project/
+  345  git hist
+  346  cd ..
+  347  mkdir AC-ajax-project
+  348  cd AC-ajax-project/
+  349  git@github.com:yunyunliu/ajax-project.git
+  350  git clone git@github.com:yunyunliu/ajax-project.git
+  351  ls
+  352  cd ajax-project/
+  353  code .
+  354  git branch
+  355  git swc issue-17
+  356  git remove -v
+  357  git remote -v
+  358  git st
+  359  git add -u
+  360  git cim 'add html and css for nav bar at top of page'
+  361  git st
+  362  git add -u 
+  363  git cim 'clicking buttons on nav var changes views'
+  364  gitst
+  365  git st
+  366  git add -u
+  367  git cim 'finish styling'
+  368  git st
+  369  git add -u
+  370  git cim 'remove commented out code'
+  371  git push origin issue-17
+  372  code .
+  373  git st
+  374  git add -u 'remove commented out code'
+  375  git add -u 
+  376  git cim 'remove commented out code'
+  377  git push origin issue-17
+  378  git swm
+  379  git merge issue-17
+  380  git swc issue-19
+  381  git st
+  382  git add -u 
+  383  git add images/
+  384  git cim 'adjust find view layout'
+  385  git st
+  386  git add -u
+  387  git st
+  388  git images/
+  389  git add images/
+  390  git st
+  391  git add -u'
+  392  git add -u
+  393  git cim 'align select element, image, and label'
+  394  git push origin issue-19
+  395  git st
+  396  git add -u
+  397  git cim 'creature icon changes as each type is selected'
+  398  git st
+  399  git add -u
+  400  git cim 'remove "comment" text from catch list items; make pen icon larger'
+  401  git push issue-19
+  402  git origin push issue-19
+  403  git push origin issue-19
+  404  git swm
+  405  git merge issue-19
+  406  git branch
+  407  git swc issue-18
+  408  git branch -M issue-18 issue-20
+  409  git st
+  410  git add -u
+  411  git cim images/NewHorizons.png
+  412  git cim 'add image to header'
+  413  git add images/NewHorizons.png
+  414  git add images/NewHorizons.png
+  415  git cim 'add image to header'
+  416  git st
+  417  add -u
+  418  git add -u
+  419  git st
+  420  git cim 'make header responsive to screen width'
+  421  git 
+  422  git st
+  423  git add -u
+  424  git st
+  425  git cim 'align form elements in "find" view''
+  426  git cim 'align form elements in "find" view'
+  427  git st
+  428  git add -u
+  429  git cim 'brand image changes size at breakpoints'
+  430  git push origin issue-20
+  431  git swm
+  432  git hst
+  433  git hist
+  434  git merge issue-19
+  435  git branch -d issue-19
+  436  git merge issue-20
+  437  git push origin master
+  438  cd ..
+  439  ls
+  440  cd Critterpedia/
+  441  git branch
+  442  code .
+  443  git st
+  444  git add -u
+  445  git cim 'creature type icon is reset to fish when view changes from "find" view'
+  446  git swc issue-18
+  447  git st
+  448  git add -u
+  449  git cim 'begin html and css for help view'
+  450  cd repos/;ls
+  451  cd ajax-project/;ls
+  452  Critterpedia/
+  453  cd Critterpedia/
+  454  code .
+  455  git st
+  456  git add -u
+  457  git cim 'change "getting started" view to "about"; add styling to about view '
+  458  git st
+  459  git add -u
+  460  git cim 'add colors adjust font in about view'
+  461  git st
+  462  git add -u
+  463  git cim 'add padding on both sides in mobile view' 
+  464  git st
+  465  git add -u
+  466  git cim 'save progress before refacctor'
+  467  git st
+  468  git add -a
+  469  git st
+  470  git add js/aboutView.js
+  471  git cim 'change "suggested searches" section to a list element; make all searchs into button elements'
+  472  git st
+  473  git cim 'clicking on a serach term takes user to find view with the search prepopulated'
+  474  git add -u
+  475  git st
+  476  git cim 'clicking on a serach term takes user to find view with the search prepopulated'
+  477  git push origin issue-18
+  478  cd repos/;ls
+  479  cd ajax-project/
+  480  cd Critterpedia/
+  481  git st
+  482  git add -u
+  483  git st
+  484  git cim 'handler that prepopulates search also switches icons'
+  485  git st
+  486  git add -u
+  487  git cim 'separate functionality for showing specific view into it's own function.'
+  488  git cim 'separate functionality for showing specific view into  own function.'
+  489  git push origin issue-18
+  490  cd ..
+  491  cd ..
+  492  ls
+  493  cd code-journal/
+  494  code .
+  495  git st
+  496  git add -u
+  497  git cim 'change cursor on buttons to pointer'
+  498  git swc polish-interface
+  499  git reset --hard
+  500  get reset --hard
+  501  cd repos/
+  502  cd rc0821-code-solutions/
+  503  git reset --hard
+  504  git swc es6-const-let
+  505  git swm
+  506  git sw es6-const-let 
+  507  git st
+  508  git add es6-const-let/
+  509  git cim 'change all instances of "var" to "let" or "const"'
+  510  git push origin es6-const-let 
+  511  git swm
+  512  git pl
+  513  git swc es6-template-literals
+  514  git st
+  515  git add es6-template-literals/
+  516  git push origin es6-template-literals 
+  517  git st
+  518  git cim 'replace string concatecation with template literals'
+  519  git push origin es6-template-literals 
+  520  git swm
+  521  git pl
+  522  git swc es6-destructuring
+  523  git st
+  524  git add es6-destructuring/
+  525  git cim 'use destructring assignment'
+  526  git push origin es6-destructuring 
+  527  git swm 
+  528  git pl
+  529  git swc es6-arrow-functions
+  530  git st
+  531  git add es6-arrow-functions/
+  532  git push origin es6-arrow-functions 
+  533  git st
+  534  git cim 'arrow functions'
+  535  git push origin es6-arrow-functions 
+  536  git swm
+  537  git pl
+  538  code .
+  539  git swc command-line-basics
+  540  ls
+  541  ls
+  542  cd command-line-basics/
+  543  pwd
+  544  man man
+  545  man cat
+  546  cat laziness.txt
+  547  cat impatience.txt
+  548  cat hubris.txt
+  549  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  550  cat three-virtues.txt 
+  551  man ls
+  552  ls 
+  553  ls -a
+  554  ls -F
+  555  man ls
+  556  ls lfz-staff/
+  557  ls -aF lfz-staff > lfz-staff/contents.txt 
+  558  cat lfz-staff/contents.txt 
+  559  man pwd
+  560  pwd
+  561  pwd > i-was-here.txt
+  562  ls
+  563  cat i-was-here.txt 
+  564  man echo
+  565  echo 'Hello, World!'
+  566  echo 'Hello World!' > hello.txt
+  567  ls
+  568  cat hello.txt 
+  569  man touch
+  570  touch tag-youre-it.txt
+  571  touch snoot/boop.txt
+  572  ls snoot/
+  573  man mkdur
+  574  man mkdir
+  575  mkdir parent
+  576  ls
+  577  man mkdir
+  578  mkdir parent/child/grandchild
+  579  mkdir -p parent/child/grandchild
+  580  touch parent/child/grandchild/.gitkeep
+  581  ls -a
+  582  ls -a parent/child/grandchild/
+  583  clear
+  584  man mv
+  585  ls
+  586  mv pokiemans pokemon
+  587  ls
+  588  man rm
+  589  rm lol.txt
+  590  ls
+  591  rm -r kill-me/
+  592  ls
+  593  man cp
+  594  cp and-then.txt no-and-then.txt
+  595  ls
+  596  cat and-then.txt 
+  597  cat no-and-then.txt 
+  598  man history
+  599  history
+  600  history > command-history.txt
