@@ -1,19 +1,10 @@
-const fs = require('fs');
+
 const data = require('./data.json');
+const writeChanges = require('./helpers');
 
 const command = process.argv[2];
 const notes = data.notes;
 let note;
-
-function writeChanges() {
-  const newData = JSON.stringify(data, null, 2);
-  fs.writeFile('./data.json', newData, (err, data) => {
-    if (err) {
-      console.error(err.message);
-      process.exit(1);
-    }
-  });
-}
 
 switch (command) {
   case 'read':
@@ -32,4 +23,11 @@ switch (command) {
     delete notes[id];
     writeChanges();
   }
+    break;
+  case 'update': {
+    const { 3: id, 4: update } = process.argv;
+    notes[id] = update;
+    writeChanges();
+  }
+    break;
 }
