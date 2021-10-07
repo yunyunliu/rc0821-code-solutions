@@ -4,7 +4,6 @@ const writeChanges = require('./helpers');
 
 const command = process.argv[2];
 const notes = data.notes;
-let note;
 
 switch (command) {
   case 'read':
@@ -12,11 +11,12 @@ switch (command) {
       console.log(`${num}: ${notes[num]}`);
     }
     break;
-  case 'create':
-    note = process.argv[3];
+  case 'create': {
+    const note = process.argv[3];
     notes[data.nextId] = note;
     data.nextId++;
     writeChanges();
+  }
     break;
   case 'delete': {
     const id = process.argv[3];

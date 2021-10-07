@@ -1,10 +1,10 @@
 {
-  "nextId": 8,
+  "nextId": 10,
   "notes": {
     "1": "an update",
     "2": "Prototypal inheritance is how JavaScript objects delegate behavior.",
-    "3": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined.",
-    "5": "this is a note",
-    "7": "The JSON.stringify() method converts a JavaScript object or value to a JSON string"
+    "3": "asdfasdfasdf",
+    "7": "The JSON.stringify() method converts a JavaScript object or value to a JSON string",
+    "8": "The switch statement evaluates an expression..."
   }
 }
