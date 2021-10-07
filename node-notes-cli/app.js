@@ -27,4 +27,9 @@ switch (command) {
     data.nextId++;
     writeChanges();
     break;
+  case 'delete': {
+    const id = process.argv[3];
+    delete notes[id];
+    writeChanges();
+  }
 }
