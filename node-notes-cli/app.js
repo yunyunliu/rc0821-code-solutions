@@ -30,4 +30,6 @@ switch (command) {
     writeChanges();
   }
     break;
+  default:
+    console.log('not a valid command');
 }
