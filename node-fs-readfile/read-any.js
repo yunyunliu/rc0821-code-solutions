@@ -8,6 +8,7 @@ function print(name) {
       console.log(err);
     } else {
       console.log(data);
+
     }
   });
 }
