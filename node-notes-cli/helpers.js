@@ -1,7 +1,6 @@
-const data = require('./data.json');
 const fs = require('fs');
 
-function writeChanges() {
+function writeChanges(data) {
   const newData = JSON.stringify(data, null, 2);
   fs.writeFile('./data.json', newData, (err, data) => {
     if (err) {
@@ -11,4 +10,4 @@ function writeChanges() {
   });
 }
 
-module.exports = writeChanges;
+module.exports = { writeChanges };

@@ -1,6 +1,6 @@
 
 const data = require('./data.json');
-const writeChanges = require('./helpers');
+const { writeChanges } = require('./helpers');
 
 const command = process.argv[2];
 const notes = data.notes;
@@ -19,7 +19,7 @@ switch (command) {
     }
     notes[data.nextId] = note;
     data.nextId++;
-    writeChanges();
+    writeChanges(data);
   }
     break;
   case 'delete': {
@@ -29,7 +29,7 @@ switch (command) {
       process.exit();
     }
     delete notes[id];
-    writeChanges();
+    writeChanges(data);
   }
     break;
   case 'update': {
@@ -38,12 +38,13 @@ switch (command) {
       console.log('include note id and updated note to make an update');
       process.exit();
     }
-    if (!Number(id)) {
+    if (!Number(id) ||
+      !Object.keys(notes).includes(id)) {
       console.log('not a valid id');
       process.exit();
     }
     notes[id] = update;
-    writeChanges();
+    writeChanges(data);
   }
     break;
   default:
