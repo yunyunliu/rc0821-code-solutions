@@ -8,12 +8,16 @@ let nextId = 1;
 
 const grades = {};
 
-app.get('/api/grades', (req, res) => {
+function formatGrades(grades) {
   const arr = [];
   for (const grade in grades) {
     arr.push(grades[grade]);
   }
-  res.json(arr);
+  return arr;
+}
+
+app.get('/api/grades', (req, res) => {
+  res.json(formatGrades(grades));
 });
 
 app.post('/api/grades', (req, res) => {
@@ -21,7 +25,9 @@ app.post('/api/grades', (req, res) => {
   newGrade.id = nextId;
   grades[nextId] = newGrade;
   nextId++;
-  res.sendStatus(201);
+
+  res.status(201);
+  res.json(newGrade);
 });
 
 app.listen(port, () => {
