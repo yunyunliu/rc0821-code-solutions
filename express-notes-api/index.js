@@ -1,5 +1,5 @@
 const express = require('express');
-const fs = require('fs');
+const writeData = require('./writeData');
 const data = require('./data.json');
 const app = express();
 app.use(express.json());
@@ -40,18 +40,21 @@ app.post('/api/notes', (req, res) => {
     };
     notes[data.nextId] = newNote;
     data.nextId++;
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), (err, data) => {
-      if (err) {
-        console.error(err.message);
-        res.status(500);
-        res.json({ error: 'An unexpected error occurred.' });
-      } else {
-        res.status(201);
-        res.json(newNote);
-      }
-    });
+    writeData(req, res, data, newNote);
+    // fs.writeFile('data.json', JSON.stringify(data, null, 2), (err, data) => {
+    //   if (err) {
+    //     console.error(err.message);
+    //     res.status(500);
+    //     res.json({ error: 'An unexpected error occurred.' });
+    //   } else {
+    //     res.status(201);
+    //     res.json(newNote);
+    //   }
+    // });
   }
 });
+
+app.delete('/api/notes')
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
