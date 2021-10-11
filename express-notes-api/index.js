@@ -13,6 +13,18 @@ app.get('/api/notes', (req, res) => {
   res.json(arr); // res.json sends response body as json; res.send, sends response as js objecct
 });
 
+app.get('/api/notes/:id', (req, res) => {
+  const id = req.params.id;
+  if (Number(id) < 1) {
+    res.status(400);
+    res.json({ error: 'id must be a positive integer' });
+  } else if (notes[id]) {
+    res.json(notes[id]);
+  } else {
+    res.status(404);
+    res.json({ error: `cannot find note with id ${id}` });
+  }
+});
 
 app.listen(port, () => {
   console.log(`server @ port ${port}`);
