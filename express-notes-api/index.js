@@ -1,6 +1,7 @@
 const data = require('./data.json');
 const express = require('express');
 const app = express();
+app.use(express.json());
 
 const port = 3000;
 const notes = data.notes;
@@ -23,6 +24,24 @@ app.get('/api/notes/:id', (req, res) => {
   } else {
     res.status(404);
     res.json({ error: `cannot find note with id ${id}` });
+  }
+});
+
+app.post('/api/notes', (req, res) => {
+  // console.log('body:', req.body);
+  const content = req.body.content;
+  console.log('content:', req.body.content);
+  if (!content) {
+    res.status(400);
+    res.json({ error: 'content is a required field' });
+  } else {
+    const newNote = {
+      id: data.nextId,
+      content
+    };
+    notes[data.nextId] = newNote;
+    data.nextId++;
+    res.json(newNote);
   }
 });
 
