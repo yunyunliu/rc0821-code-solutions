@@ -57,8 +57,6 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const id = req.params.id; // id is type string
-  // console.log(Number(id));
-  // console.log (typeof id)
   if (Number(id) < 1 || !Number(id)) {
     res.status(400);
     res.json({ error: 'id must be a positive integer' });
@@ -66,13 +64,13 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404);
     res.json({ error: `cannot find note with id ${id}` });
   } else {
-    delete notes[id];
     fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err, data) => {
       if (err) {
         console.error(err.message);
         res.status(500);
         res.json({ error: 'An unexpected error occurred.' });
       } else {
+        delete notes[id];
         res.sendStatus(204);
       }
     });
@@ -91,8 +89,18 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!notes[id]) {
     res.status(404);
     res.json({ error: `cannot find note with id ${id}` });
+  } else {
+    const updated = { id, content };
+    fs.writeFile('./herp/data.json', JSON.stringify(data, null, 2), (err, data) => {
+      if (err) {
+        res.status(500);
+        res.json({ error: 'An unexpected error occurred.' });
+      } else {
+        notes[id] = updated;
+        res.json(updated);
+      }
+    });
   }
-  res.end();
 });
 
 app.listen(port, () => {
