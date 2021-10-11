@@ -79,6 +79,22 @@ app.delete('/api/notes/:id', (req, res) => {
   }
 });
 
+app.put('/api/notes/:id', (req, res) => {
+  const id = req.params.id;
+  const content = req.body.content;
+  if (Number(id) < 1 || !Number(id)) {
+    res.status(400);
+    res.json({ error: 'id must be a positive integer' });
+  } else if (!content) {
+    res.status(400);
+    res.json({ error: 'content is a required field' });
+  } else if (!notes[id]) {
+    res.status(404);
+    res.json({ error: `cannot find note with id ${id}` });
+  }
+  res.end();
+});
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`server @ port ${port}`);
