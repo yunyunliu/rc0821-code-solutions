@@ -1,5 +1,6 @@
-const data = require('./data.json');
 const express = require('express');
+const fs = require('fs');
+const data = require('./data.json');
 const app = express();
 app.use(express.json());
 
@@ -28,9 +29,7 @@ app.get('/api/notes/:id', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-  // console.log('body:', req.body);
   const content = req.body.content;
-  console.log('content:', req.body.content);
   if (!content) {
     res.status(400);
     res.json({ error: 'content is a required field' });
@@ -41,10 +40,20 @@ app.post('/api/notes', (req, res) => {
     };
     notes[data.nextId] = newNote;
     data.nextId++;
-    res.json(newNote);
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), (err, data) => {
+      if (err) {
+        console.error(err.message);
+        res.status(500);
+        res.json({ error: 'An unexpected error occurred.' });
+      } else {
+        res.status(201);
+        res.json(newNote);
+      }
+    });
   }
 });
 
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`server @ port ${port}`);
 });
