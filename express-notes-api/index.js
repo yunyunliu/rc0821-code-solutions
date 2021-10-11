@@ -41,7 +41,6 @@ app.post('/api/notes', (req, res) => {
     };
     notes[data.nextId] = newNote;
     data.nextId++;
-    // writeData(req, res, data, newNote);
     fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err, data) => {
       if (err) {
         console.error(err.message);
@@ -92,7 +91,7 @@ app.put('/api/notes/:id', (req, res) => {
   } else {
     const updated = { id, content };
     notes[id] = updated;
-    fs.writeFile('./herp/data.json', JSON.stringify(data, null, 2), (err, data) => {
+    fs.writeFile('./data.json', JSON.stringify(data, null, 2), (err, data) => {
       if (err) {
         res.status(500);
         res.json({ error: 'An unexpected error occurred.' });
