@@ -37,13 +37,15 @@ app.post('/api/grades', (req, res) => {
   if (!name || !course || !score) {
     res.status(400)
       .json({ error: '"name", "course", and "score" required' });
-  } else if (Number(score) < 0 ||
+    return;
+  }
+  if (Number(score) < 0 ||
       Number(score) > 100 ||
       !Number.isInteger(Number(score))) {
     res.status(400)
       .json({ error: '"score" must be an integer between 1 and 100' });
+    return;
   }
-
   const sql = `
       INSERT INTO "grades"
         ("name", "course", "score")
@@ -65,7 +67,41 @@ app.post('/api/grades', (req, res) => {
 });
 
 app.put('/api/grades/:gradeId', (req, res) => {
-  const { gradeId } = req.params;
-  console.log('gradeId', gradeId);
-  res.end();
+  const gradeId = Number(req.params.gradeId);
+  const { name, course, score } = req.body;
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    res.status(400)
+      .json({ error: '"gradeID" must be a positive integer' });
+    return;
+  }
+  if (!name || !course || !score) {
+    res.status(400)
+      .json({ error: '"name", "course", and "score" required' });
+    return;
+  }
+  const sql = `
+    UPDATE "grades"
+        SET "name" = $1,
+            "course" = $2,
+            "score" = $3
+        WHERE "gradeId" = $4
+        RETURNING *;
+    `;
+  const params = [name, course, score, gradeId];
+  db.query(sql, params)
+    .then(data => {
+      console.log('data:', data);
+      const [update] = data.rows;
+      if (!update) {
+        res.status(404)
+          .json({ error: `grade with id ${gradeId} does not exist` });
+      } else {
+        res.json(update);
+      }
+    })
+    .catch(err => {
+      console.log('error:', err.message);
+      res.status(500)
+        .json({ error: 'unexpected error occurred' });
+    });
 });
