@@ -11,6 +11,6 @@ const newDoubled = map(numbers, n => 2 * n);
 
 console.log('map(numbers, n => 2 * n):', newDoubled);
 
-const newPrices = map(numbers, num => `$${num}.00`);
+const newPrices = map(numbers, num => `$${num.toFixed(2)}`);
 
 console.log('prices using map():', newPrices);
