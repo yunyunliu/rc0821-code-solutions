@@ -11,14 +11,19 @@ class ToggleSwitch extends Component {
   }
 
   render() {
-    let classes;
+    let color;
+    let direction;
     if (this.state.isOn) {
-      classes = 'button green-bg';
+      color = 'button green-bg';
+      direction = 'slider slide-right';
     } else {
-      classes = 'button';
+      color = 'button';
+      direction = 'slider';
     }
     return (
-      <button className={ classes } onClick={() => this.toggle()}></button>
+      <button className={color} onClick={() => this.toggle()}>
+        <div className={direction}></div>
+      </button>
     );
   }
 }
