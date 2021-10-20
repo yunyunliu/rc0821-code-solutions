@@ -12,7 +12,7 @@ class ToggleSwitch extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <button id="switch" className={`button ${this.state.isOn ? 'green-bg' : ''}`} onClick={() => this.toggle()}>
           <div className={`slider ${this.state.isOn ? 'slide-right' : ''}`}></div>
         </button>

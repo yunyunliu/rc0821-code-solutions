@@ -1,5 +1,11 @@
+.container {
+  display: flex;
+  margin-top: 50px;
+}
+
 .button {
-  margin: 50px 100px;
+  margin-left: 100px;
+  margin-right: 50px;
   width: 40px;
   height: 20px;
   border-radius: 10px;
