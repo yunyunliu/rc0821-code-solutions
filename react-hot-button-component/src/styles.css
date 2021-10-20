@@ -1,0 +1,33 @@
+.button {
+  border-radius: 0;
+  height: 40px;
+  width: 100px;
+  background-color: #351c75;
+  color: white;
+  box-shadow: 4px 5px 2px 0 #120c14;
+  border: 3px solid black;
+  margin: 50px;
+}
+
+.bg-lavendar {
+  background-color: #674ea7;
+}
+
+.bg-pink {
+  background-color: #e06666;
+}
+
+.bg-orange {
+  background-color: #f6b26b;
+  color: black;
+}
+
+.bg-yellow {
+  background-color: #ffff01;
+  color: black;
+}
+
+.bg-white {
+  background-color: white;
+  color: black;
+}
