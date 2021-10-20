@@ -27,6 +27,18 @@ class Stopwatch extends React.Component {
     this.setState({ isOn: !this.state.isOn });
   }
 
+  handleReset() {
+    if (!this.state.isOn) {
+      // clear timer; set state.timer to null; set state.seconds to 0
+      clearInterval(this.state.timer);
+      this.setState({
+        timer: null,
+        seconds: 0
+      });
+    }
+    // when stopwatch is on, do nothing
+  }
+
   render() {
     let icon;
     if (this.state.isOn) {
@@ -37,9 +49,9 @@ class Stopwatch extends React.Component {
 
     return (
       <div className="container">
-        <div className="watch">
+        <button className="watch" onClick={() => this.handleReset()}>
           <span className="number">{this.state.seconds}</span>
-        </div>
+        </button>
         <button className="button" onClick={() => this.handleClick()}>
           <i className={icon}></i>
         </button>
