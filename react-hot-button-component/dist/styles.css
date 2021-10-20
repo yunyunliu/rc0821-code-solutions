@@ -7,6 +7,7 @@
   box-shadow: 4px 5px 2px 0 #120c14;
   border: 3px solid black;
   margin: 50px;
+  transition-duration: 400ms;
 }
 
 .bg-lavendar {

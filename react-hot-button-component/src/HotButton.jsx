@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './styles.css';
-
 class HotButton extends React.Component {
   constructor() {
     super();
@@ -9,7 +7,7 @@ class HotButton extends React.Component {
   }
 
   handleClick() {
-    if (this.state.count === 18) {
+    if (this.state.count === 17) {
       this.setState({ count: 0 });
     } else {
       this.setState(prevState => ({ count: this.state.count + 1 }));
@@ -35,9 +33,10 @@ class HotButton extends React.Component {
     }
 
     return (
-      <button className={`button ${className}`}onClick={() => this.handleClick()}>
+      <button className={`button ${className}`} onClick={() => this.handleClick()}>
         Hot Button
-      </button>);
+      </button>
+    );
   }
 }
 
