@@ -10,11 +10,11 @@ class HotButton extends React.Component {
     if (this.state.count === 17) {
       this.setState({ count: 0 });
     } else {
-      this.setState(prevState => ({ count: this.state.count + 1 }));
+      this.setState({ count: this.state.count + 1 });
     }
   }
 
-  render() {
+  getClass() {
     let className;
     if (this.state.count >= 3 &&
       this.state.count < 6) {
@@ -31,9 +31,12 @@ class HotButton extends React.Component {
     } else if (this.state.count >= 15) {
       className = 'bg-white';
     }
+    return className;
+  }
 
+  render() {
     return (
-      <button className={`button ${className}`} onClick={() => this.handleClick()}>
+      <button className={`button ${this.getClass()}`} onClick={() => this.handleClick()}>
         Hot Button
       </button>
     );
