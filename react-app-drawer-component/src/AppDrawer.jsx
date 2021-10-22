@@ -15,7 +15,7 @@ class AppDrawer extends React.Component {
   render() {
     return (
       <div>
-        <button className="button" type="button" onClick={() => this.toggleMenu()}>
+        <button className="icon btn" type="button" onClick={() => this.toggleMenu()}>
           <i className="fas fa-bars"></i>
         </button>
         { this.state.menuHidden

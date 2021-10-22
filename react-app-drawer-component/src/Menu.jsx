@@ -9,7 +9,7 @@ const Menu = ({ toggle }) => {
           return (
             <li key={el}>
               <button type="button"
-                className="button"
+                className="btn"
                 onClick={() => toggle()}>{el}</button>
             </li>
           );

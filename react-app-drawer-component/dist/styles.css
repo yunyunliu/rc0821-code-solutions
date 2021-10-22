@@ -13,15 +13,32 @@
   margin-top: 100px;
 }
 
-.button {
+.btn {
   border: none;
   background-color: white;
   font-size: 22px;
+}
+
+.icon {
   margin: 5px;
 }
 
+li button {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+li button:hover {
+  background-color: #acafb0;
+}
+
 .menu {
-  padding-top: 15px;
+  padding-top: 30px;
   margin: 0 0;
   background-color: white;
   list-style-type: none;
@@ -30,7 +47,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  translateX
+  padding-left: 0;
 }
 
 .overlay {
