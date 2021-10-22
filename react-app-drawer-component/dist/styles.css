@@ -30,8 +30,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-
-  /* transition-duration: 1000ms; */
+  translateX
 }
 
 .overlay {
@@ -42,6 +41,4 @@
   right: 0;
   top: 0;
   bottom: 0;
-
-  /* transition-duration: 1000ms; */
 }
