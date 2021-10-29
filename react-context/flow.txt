@@ -1,0 +1,26 @@
+Create a file in the root of your react-context solution directory named flow.txt. For each feature in the application, describe the flow of the code in writing, including the client, server, and database. How does the code work?
+
+User can sign up.
+1. user entered data is stored in state of AuthForm component
+2. this data is then sent to server by handleSubmit
+
+User can sign in.
+1. password and username stored in state of AuthForm after entered by user
+2. data sent to server by handleSubmit
+3. response from server contains a token
+4. this.props.onSignin called on response from server
+5. handleSignIn/onSignIn saves token to local storage at 'react-context-jwt'
+and stores user information in the state of the App compponent.
+6. user information made available to other components through context
+
+
+User can stay signed in (even if they refresh the page).
+1. at componentDidMount of App, localStorage is checked for a token. If
+there is a token, it is decoded to get user information. User information
+ then passed to rest of component tree through context
+
+
+User can sign out.
+1. when handleSignOut is called, user data is removed from localStorage and state.user of
+App component is set to null. All the components further down the component tree know about
+the change in state.user because they are subscribed to it through context
