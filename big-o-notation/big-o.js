@@ -9,9 +9,9 @@ function uniqueLinear(words) {
     i++                             // 2 (increment, assignment) * n =  2n => O(n)
   ) {
     const word = words[i];          // 2 * n = O(n)
-    if (!seen[word]) {              // 3 * n = O(n)
+    if (!seen[word]) {              // 2 (1. comparison 2. assignment) * n = O(n)
       seen[word] = true;
-      unique[unique.length] = word; // 3 * n = O(n)
+      unique[unique.length] = word; // 2 * n (Assignment even to an array at index is considered 1 operation ) = O(n)
     }
   }
   return unique;
@@ -37,7 +37,7 @@ function uniqueQuadratic(words) {
       }
     }
     if (isUnique) {                 // 1 * n = O(n)
-      unique[unique.length] = word; // 3 * n = O(n)
+      unique[unique.length] = word; // 2 (1. access unique.length 2. assignment) * n = O(n)
     }
   }
   return unique;                    // 1 * 1 = O(1)
