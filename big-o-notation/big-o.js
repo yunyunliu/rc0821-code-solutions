@@ -28,16 +28,16 @@ function uniqueQuadratic(words) {
     let isUnique = true;            // 1 * n = O(n)
     for (
       let c = 0;                    // 1 * 1 = O(1)
-      c < i;                        // 1 * n * n = O(n^2)
-      c++                           // 2 * n * n = O(n^2)
+      c < i;                        // 1 * n^2 = O(n^2)
+      c++                           // 2 * n^2 = O(n^2)
     ) {
-      const comparing = words[c];   // 2 * n * n = O(n^2)
-      if (comparing === word) {     // 1 * n * n = O(n^2)
-        isUnique = false;           // 1 * n * n = O(n^2)
+      const comparing = words[c];   // 2 * n^2 = O(n^2)
+      if (comparing === word) {     // 1 * n^2 = O(n^2)
+        isUnique = false;           // 1 * n^2 = O(n^2)
       }
     }
-    if (isUnique) {                 // 1 * n * n = O(n^2)
-      unique[unique.length] = word; // 3 * n * n = O(n^2)
+    if (isUnique) {                 // 1 * n^2 = O(n^2)
+      unique[unique.length] = word; // 3 * n^2 = O(n^2)
     }
   }
   return unique;                    // 1 * 1 = O(1)
