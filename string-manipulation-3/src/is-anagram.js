@@ -1,42 +1,25 @@
 /* exported isAnagram */
-// spaces don't matter
-// 1. remove all spaces from both input strings
-// compare lengths; if not same lenght return false
-// if same length iterate through one string
-// at each index check if character in other string;
+// 2 strings are anagrams if they have the same number of letter and the same frequency of each letter
+// frequency counter pattern
 
-function removeSpacesAndSplit(string) {
-  const str = string.replaceAll(' ', '');
-  return str.split('');
-}
+function isAnagram(first, second) {
+  const str1 = first.replaceAll(' ', '');
+  const str2 = second.replaceAll(' ', '');
+  if (str1.length !== str2.length) return false;
+  const freq1 = {}; const freq2 = {};
 
-// console.log(removeSpaces('school master'.split('')));
-
-function isAnagram(firstString, secondString) {
-
-  // turn strings into arrays with no spaces
-
-  const firstArr = removeSpacesAndSplit(firstString);
-  const secondArr = removeSpacesAndSplit(secondString);
-
-  //  console.log('firstArr', firstArr);
-  //   console.log('secondArr', secondArr);
-
-  // if the two strings don't have the same number of letters, they can't be anagrams
-
-  if (firstArr.length !== secondArr.length) {
-    return false;
+  for (let i = 0; i < str1.length; i++) {
+    const char = str1[i];
+    freq1[char] ? freq1[char]++ : freq1[char] = 1;
   }
-  const remainingChars = secondArr.slice();
-  for (let i = 0; i < firstArr.length; i++) {
 
-    const letter = firstArr[i];
-    if (remainingChars.includes(letter)) {
-      const index = remainingChars.indexOf(letter);
-      remainingChars.splice(index, 1);
-      continue;
-    }
-    return false;
+  for (let i = 0; i < str2.length; i++) {
+    const char = str2[i];
+    freq2[char] ? freq2[char]++ : freq2[char] = 1;
+  }
+
+  for (const char in freq1) {
+    if (freq1[char] !== freq2[char]) return false;
   }
   return true;
 }
